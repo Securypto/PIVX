@@ -1,6 +1,6 @@
 [Protocol]
-exec=pivx-qt '%u'
-protocol=pivx
+exec=securypto-qt '%u'
+protocol=securypto
 input=none
 output=none
 helper=true

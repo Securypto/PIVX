@@ -1,31 +1,31 @@
 #!/bin/bash
 #
-#  pivxd The Securypto core server.
+#  securyptod The Securypto core server.
 #
 #
 # chkconfig: 345 80 20
-# description: pivxd
-# processname: pivxd
+# description: securyptod
+# processname: securyptod
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/pivxd, see below
-if [ -f /etc/sysconfig/pivxd ]; then
-        . /etc/sysconfig/pivxd
+# you can override defaults in /etc/sysconfig/securyptod, see below
+if [ -f /etc/sysconfig/securyptod ]; then
+        . /etc/sysconfig/securyptod
 fi
 
 RETVAL=0
 
-prog=pivxd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/pivxd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/pivxd}
+prog=securyptod
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/securyptod
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/securyptod}
 
-# pivxd defaults to /usr/bin/pivxd, override with BITCOIND_BIN
-bitcoind=${BITCOIND_BIN-/usr/bin/pivxd}
+# securyptod defaults to /usr/bin/securyptod, override with BITCOIND_BIN
+bitcoind=${BITCOIND_BIN-/usr/bin/securyptod}
 
-# pivxd opts default to -disablewallet, override with BITCOIND_OPTS
+# securyptod opts default to -disablewallet, override with BITCOIND_OPTS
 bitcoind_opts=${BITCOIND_OPTS}
 
 start() {

@@ -57,23 +57,23 @@ def build():
 
     if args.linux:
         print('\nCompiling ' + args.version + ' Linux')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'pivx='+args.commit, '--url', 'pivx='+args.url, '../Securypto/contrib/gitian-descriptors/gitian-linux.yml'])
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'securypto='+args.commit, '--url', 'securypto='+args.url, '../Securypto/contrib/gitian-descriptors/gitian-linux.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-linux', '--destination', '../gitian.sigs/', '../Securypto/contrib/gitian-descriptors/gitian-linux.yml'])
-        subprocess.check_call('mv build/out/pivx-*.tar.gz build/out/src/pivx-*.tar.gz ../Securypto-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/securypto-*.tar.gz build/out/src/securypto-*.tar.gz ../Securypto-binaries/'+args.version, shell=True)
 
     if args.windows:
         print('\nCompiling ' + args.version + ' Windows')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'pivx='+args.commit, '--url', 'pivx='+args.url, '../Securypto/contrib/gitian-descriptors/gitian-win.yml'])
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'securypto='+args.commit, '--url', 'securypto='+args.url, '../Securypto/contrib/gitian-descriptors/gitian-win.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-unsigned', '--destination', '../gitian.sigs/', '../Securypto/contrib/gitian-descriptors/gitian-win.yml'])
-        subprocess.check_call('mv build/out/pivx-*-win-unsigned.tar.gz inputs/', shell=True)
-        subprocess.check_call('mv build/out/pivx-*.zip build/out/pivx-*.exe ../Securypto-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/securypto-*-win-unsigned.tar.gz inputs/', shell=True)
+        subprocess.check_call('mv build/out/securypto-*.zip build/out/securypto-*.exe ../Securypto-binaries/'+args.version, shell=True)
 
     if args.macos:
         print('\nCompiling ' + args.version + ' MacOS')
-        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'pivx='+args.commit, '--url', 'pivx='+args.url, '../Securypto/contrib/gitian-descriptors/gitian-osx.yml'])
+        subprocess.check_call(['bin/gbuild', '-j', args.jobs, '-m', args.memory, '--commit', 'securypto='+args.commit, '--url', 'securypto='+args.url, '../Securypto/contrib/gitian-descriptors/gitian-osx.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-unsigned', '--destination', '../gitian.sigs/', '../Securypto/contrib/gitian-descriptors/gitian-osx.yml'])
-        subprocess.check_call('mv build/out/pivx-*-osx-unsigned.tar.gz inputs/', shell=True)
-        subprocess.check_call('mv build/out/pivx-*.tar.gz build/out/pivx-*.dmg ../Securypto-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/securypto-*-osx-unsigned.tar.gz inputs/', shell=True)
+        subprocess.check_call('mv build/out/securypto-*.tar.gz build/out/securypto-*.dmg ../Securypto-binaries/'+args.version, shell=True)
 
     os.chdir(workdir)
 
@@ -99,15 +99,15 @@ def sign():
         subprocess.check_call('cp inputs/Securypto-' + args.version + '-win-unsigned.tar.gz inputs/Securypto-win-unsigned.tar.gz', shell=True)
         subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../Securypto/contrib/gitian-descriptors/gitian-win-signer.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-win-signed', '--destination', '../gitian.sigs/', '../Securypto/contrib/gitian-descriptors/gitian-win-signer.yml'])
-        subprocess.check_call('mv build/out/pivx-*win64-setup.exe ../Securypto-binaries/'+args.version, shell=True)
-        subprocess.check_call('mv build/out/pivx-*win32-setup.exe ../Securypto-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/securypto-*win64-setup.exe ../Securypto-binaries/'+args.version, shell=True)
+        subprocess.check_call('mv build/out/securypto-*win32-setup.exe ../Securypto-binaries/'+args.version, shell=True)
 
     if args.macos:
         print('\nSigning ' + args.version + ' MacOS')
         subprocess.check_call('cp inputs/Securypto-' + args.version + '-osx-unsigned.tar.gz inputs/Securypto-osx-unsigned.tar.gz', shell=True)
         subprocess.check_call(['bin/gbuild', '-i', '--commit', 'signature='+args.commit, '../Securypto/contrib/gitian-descriptors/gitian-osx-signer.yml'])
         subprocess.check_call(['bin/gsign', '-p', args.sign_prog, '--signer', args.signer, '--release', args.version+'-osx-signed', '--destination', '../gitian.sigs/', '../Securypto/contrib/gitian-descriptors/gitian-osx-signer.yml'])
-        subprocess.check_call('mv build/out/pivx-osx-signed.dmg ../Securypto-binaries/'+args.version+'/Securypto-'+args.version+'-osx.dmg', shell=True)
+        subprocess.check_call('mv build/out/securypto-osx-signed.dmg ../Securypto-binaries/'+args.version+'/Securypto-'+args.version+'-osx.dmg', shell=True)
 
     os.chdir(workdir)
 
