@@ -103,7 +103,7 @@ std::string to_internal(const std::string&);
 
 using namespace std;
 
-// PIVX only features
+// Securypto only features
 // Masternode
 bool fMasterNode = false;
 string strMasterNodePrivKey = "";
@@ -236,7 +236,7 @@ bool LogAcceptCategory(const char* category)
             const vector<string>& categories = mapMultiArgs["-debug"];
             ptrCategory.reset(new set<string>(categories.begin(), categories.end()));
             // thread_specific_ptr automatically deletes the set when the thread ends.
-            // "pivx" is a composite category enabling all PIVX-related debug output
+            // "pivx" is a composite category enabling all Securypto-related debug output
             if (ptrCategory->count(string("pivx"))) {
                 ptrCategory->insert(string("obfuscation"));
                 ptrCategory->insert(string("swiftx"));
@@ -425,13 +425,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-// Windows < Vista: C:\Documents and Settings\Username\Application Data\PIVX
-// Windows >= Vista: C:\Users\Username\AppData\Roaming\PIVX
-// Mac: ~/Library/Application Support/PIVX
+// Windows < Vista: C:\Documents and Settings\Username\Application Data\Securypto
+// Windows >= Vista: C:\Users\Username\AppData\Roaming\Securypto
+// Mac: ~/Library/Application Support/Securypto
 // Unix: ~/.pivx
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "PIVX";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Securypto";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -443,7 +443,7 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     TryCreateDirectory(pathRet);
-    return pathRet / "PIVX";
+    return pathRet / "Securypto";
 #else
     // Unix
     return pathRet / ".pivx";

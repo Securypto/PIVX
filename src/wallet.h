@@ -87,30 +87,30 @@ enum AvailableCoinsType {
     ALL_COINS = 1,
     ONLY_DENOMINATED = 2,
     ONLY_NOT10000IFMN = 3,
-    ONLY_NONDENOMINATED_NOT10000IFMN = 4, // ONLY_NONDENOMINATED and not 10000 PIV at the same time
+    ONLY_NONDENOMINATED_NOT10000IFMN = 4, // ONLY_NONDENOMINATED and not 10000 SCU at the same time
     ONLY_10000 = 5,                        // find masternode outputs including locked ones (use with caution)
     STAKABLE_COINS = 6                          // UTXO's that are valid for staking
 };
 
-// Possible states for zPIV send
+// Possible states for zSCU send
 enum ZerocoinSpendStatus {
-    ZPIV_SPEND_OKAY = 0,                            // No error
-    ZPIV_SPEND_ERROR = 1,                           // Unspecified class of errors, more details are (hopefully) in the returning text
-    ZPIV_WALLET_LOCKED = 2,                         // Wallet was locked
-    ZPIV_COMMIT_FAILED = 3,                         // Commit failed, reset status
-    ZPIV_ERASE_SPENDS_FAILED = 4,                   // Erasing spends during reset failed
-    ZPIV_ERASE_NEW_MINTS_FAILED = 5,                // Erasing new mints during reset failed
-    ZPIV_TRX_FUNDS_PROBLEMS = 6,                    // Everything related to available funds
-    ZPIV_TRX_CREATE = 7,                            // Everything related to create the transaction
-    ZPIV_TRX_CHANGE = 8,                            // Everything related to transaction change
-    ZPIV_TXMINT_GENERAL = 9,                        // General errors in MintToTxIn
-    ZPIV_INVALID_COIN = 10,                         // Selected mint coin is not valid
-    ZPIV_FAILED_ACCUMULATOR_INITIALIZATION = 11,    // Failed to initialize witness
-    ZPIV_INVALID_WITNESS = 12,                      // Spend coin transaction did not verify
-    ZPIV_BAD_SERIALIZATION = 13,                    // Transaction verification failed
-    ZPIV_SPENT_USED_ZPIV = 14,                      // Coin has already been spend
-    ZPIV_TX_TOO_LARGE = 15,                          // The transaction is larger than the max tx size
-    ZPIV_SPEND_V1_SEC_LEVEL                         // Spend is V1 and security level is not set to 100
+    ZSCU_SPEND_OKAY = 0,                            // No error
+    ZSCU_SPEND_ERROR = 1,                           // Unspecified class of errors, more details are (hopefully) in the returning text
+    ZSCU_WALLET_LOCKED = 2,                         // Wallet was locked
+    ZSCU_COMMIT_FAILED = 3,                         // Commit failed, reset status
+    ZSCU_ERASE_SPENDS_FAILED = 4,                   // Erasing spends during reset failed
+    ZSCU_ERASE_NEW_MINTS_FAILED = 5,                // Erasing new mints during reset failed
+    ZSCU_TRX_FUNDS_PROBLEMS = 6,                    // Everything related to available funds
+    ZSCU_TRX_CREATE = 7,                            // Everything related to create the transaction
+    ZSCU_TRX_CHANGE = 8,                            // Everything related to transaction change
+    ZSCU_TXMINT_GENERAL = 9,                        // General errors in MintToTxIn
+    ZSCU_INVALID_COIN = 10,                         // Selected mint coin is not valid
+    ZSCU_FAILED_ACCUMULATOR_INITIALIZATION = 11,    // Failed to initialize witness
+    ZSCU_INVALID_WITNESS = 12,                      // Spend coin transaction did not verify
+    ZSCU_BAD_SERIALIZATION = 13,                    // Transaction verification failed
+    ZSCU_SPENT_USED_ZSCU = 14,                      // Coin has already been spend
+    ZSCU_TX_TOO_LARGE = 15,                          // The transaction is larger than the max tx size
+    ZSCU_SPEND_V1_SEC_LEVEL                         // Spend is V1 and security level is not set to 100
 };
 
 struct CompactTallyItem {
@@ -221,7 +221,7 @@ public:
     void ReconsiderZerocoins(std::list<CZerocoinMint>& listMintsRestored, std::list<CDeterministicMint>& listDMintsRestored);
     void ZPivBackupWallet();
     bool GetZerocoinKey(const CBigNum& bnSerial, CKey& key);
-    bool CreateZPIVOutPut(libzerocoin::CoinDenomination denomination, CTxOut& outMint, CDeterministicMint& dMint);
+    bool CreateZSCUOutPut(libzerocoin::CoinDenomination denomination, CTxOut& outMint, CDeterministicMint& dMint);
     bool GetMint(const uint256& hashSerial, CZerocoinMint& mint);
     bool GetMintFromStakeHash(const uint256& hashStake, CZerocoinMint& mint);
     bool DatabaseMint(CDeterministicMint& dMint);
@@ -244,7 +244,7 @@ public:
      */
     mutable CCriticalSection cs_wallet;
 
-    CzPIVWallet* zwalletMain;
+    CzSCUWallet* zwalletMain;
 
     std::set<CBitcoinAddress> setAutoConvertAddresses;
 
@@ -252,7 +252,7 @@ public:
     bool fWalletUnlockAnonymizeOnly;
     std::string strWalletFile;
     bool fBackupMints;
-    std::unique_ptr<CzPIVTracker> zpivTracker;
+    std::unique_ptr<CzSCUTracker> zpivTracker;
 
     std::set<int64_t> setKeyPool;
     std::map<CKeyID, CKeyMetadata> mapKeyMetadata;
@@ -337,13 +337,13 @@ public:
         return nZeromintPercentage;
     }
 
-    void setZWallet(CzPIVWallet* zwallet)
+    void setZWallet(CzSCUWallet* zwallet)
     {
         zwalletMain = zwallet;
-        zpivTracker = std::unique_ptr<CzPIVTracker>(new CzPIVTracker(strWalletFile));
+        zpivTracker = std::unique_ptr<CzSCUTracker>(new CzSCUTracker(strWalletFile));
     }
 
-    CzPIVWallet* getZWallet() { return zwalletMain; }
+    CzSCUWallet* getZWallet() { return zwalletMain; }
 
     bool isZeromintEnabled()
     {
@@ -685,8 +685,8 @@ public:
     /** MultiSig address added */
     boost::signals2::signal<void(bool fHaveMultiSig)> NotifyMultiSigChanged;
 
-    /** zPIV reset */
-    boost::signals2::signal<void()> NotifyzPIVReset;
+    /** zSCU reset */
+    boost::signals2::signal<void()> NotifyzSCUReset;
 
     /** notify wallet file backed up */
     boost::signals2::signal<void (const bool& fSuccess, const std::string& filename)> NotifyWalletBacked;

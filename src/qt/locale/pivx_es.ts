@@ -62,12 +62,12 @@
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son sus direcciones PIVX para realizar pagos. Verifique siempre la cantidad y la dirección de recepción antes de enviar monedas.</translation>
+        <source>These are your Securypto addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son sus direcciones Securypto para realizar pagos. Verifique siempre la cantidad y la dirección de recepción antes de enviar monedas.</translation>
     </message>
     <message>
-        <source>These are your PIVX addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son sus direcciones PIVX para recibir pagos. Es recomendable usar una nueva dirección de recepción para cada transacción.</translation>
+        <source>These are your Securypto addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son sus direcciones Securypto para recibir pagos. Es recomendable usar una nueva dirección de recepción para cada transacción.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,16 +176,16 @@
         <translation>Confirme el cifrado del monedero</translation>
     </message>
     <message>
-        <source>PIVX will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your PIVs from being stolen by malware infecting your computer.</source>
-        <translation>PIVX se cerrará para finalizar el proceso de cifrado. Recuerde que cifrar su monedero no garantiza que sus PIVs no sean robados mediante malware de su ordenador.</translation>
+        <source>Securypto will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your SCUs from being stolen by malware infecting your computer.</source>
+        <translation>Securypto se cerrará para finalizar el proceso de cifrado. Recuerde que cifrar su monedero no garantiza que sus SCUs no sean robados mediante malware de su ordenador.</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
         <translation>¿Está seguro de que desea cifrar su monedero?</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR PIV&lt;/b&gt;!</source>
-        <translation>Atención: Si cifra su monedero y pierde su contraseña, perderá &lt;b&gt; TODOS SUS PIV&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR SCU&lt;/b&gt;!</source>
+        <translation>Atención: Si cifra su monedero y pierde su contraseña, perderá &lt;b&gt; TODOS SUS SCU&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Wallet encrypted</source>
@@ -254,12 +254,12 @@
         <translation>Dirección:</translation>
     </message>
     <message>
-        <source>Enter a PIVX Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
-        <translation>Introduzca la dirección PIVX que querría cifrar usando BIP 38. Introduzca una contraseña en el campo central. Haga clic en cifrar para generar la clave privada cifrada.</translation>
+        <source>Enter a Securypto Address that you would like to encrypt using BIP 38. Enter a passphrase in the middle box. Press encrypt to compute the encrypted private key.</source>
+        <translation>Introduzca la dirección Securypto que querría cifrar usando BIP 38. Introduzca una contraseña en el campo central. Haga clic en cifrar para generar la clave privada cifrada.</translation>
     </message>
     <message>
-        <source>The PIVX address to encrypt</source>
-        <translation>La dirección PIVX a cifrar</translation>
+        <source>The Securypto address to encrypt</source>
+        <translation>La dirección Securypto a cifrar</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -290,8 +290,8 @@
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Encrypt the private key for this PIVX address</source>
-        <translation>Cifrar la llave privada para esta dirección PIVX</translation>
+        <source>Encrypt the private key for this Securypto address</source>
+        <translation>Cifrar la llave privada para esta dirección Securypto</translation>
     </message>
     <message>
         <source>Reset all fields</source>
@@ -433,8 +433,8 @@
         <translation>Navegar por el historial de transacciones</translation>
     </message>
     <message>
-        <source>Privacy Actions for zPIV</source>
-        <translation>Acciones de privacidad para zPIV</translation>
+        <source>Privacy Actions for zSCU</source>
+        <translation>Acciones de privacidad para zSCU</translation>
     </message>
     <message>
         <source>E&amp;xit</source>
@@ -641,12 +641,12 @@
         <translation>Herramienta de pestañas</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>Securypto Core</source>
+        <translation>Securypto Core</translation>
     </message>
     <message>
-        <source>Send coins to a PIVX address</source>
-        <translation>Enviar monedas a una dirección PIVX</translation>
+        <source>Send coins to a Securypto address</source>
+        <translation>Enviar monedas a una dirección Securypto</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and pivx: URIs)</source>
@@ -665,24 +665,24 @@
         <translation>Explorar masternodes</translation>
     </message>
     <message>
-        <source>&amp;About PIVX Core</source>
-        <translation>&amp;Sobre PIVX Core</translation>
+        <source>&amp;About Securypto Core</source>
+        <translation>&amp;Sobre Securypto Core</translation>
     </message>
     <message>
-        <source>Show information about PIVX Core</source>
-        <translation>Mostrar información sobre PIVX Core</translation>
+        <source>Show information about Securypto Core</source>
+        <translation>Mostrar información sobre Securypto Core</translation>
     </message>
     <message>
-        <source>Modify configuration options for PIVX</source>
-        <translation>Modificar las opciones de configuración de PIVX</translation>
+        <source>Modify configuration options for Securypto</source>
+        <translation>Modificar las opciones de configuración de Securypto</translation>
     </message>
     <message>
-        <source>Sign messages with your PIVX addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones PIVX para demostrar que le pertenecen</translation>
+        <source>Sign messages with your Securypto addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones Securypto para demostrar que le pertenecen</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified PIVX addresses</source>
-        <translation>Verificar mensajes para asegurar que están firmados con la dirección PIVX especificada</translation>
+        <source>Verify messages to ensure they were signed with specified Securypto addresses</source>
+        <translation>Verificar mensajes para asegurar que están firmados con la dirección Securypto especificada</translation>
     </message>
     <message>
         <source>&amp;BIP38 tool</source>
@@ -713,8 +713,8 @@
         <translation>Abrir fichero de Configuración de masternodes</translation>
     </message>
     <message>
-        <source>Open a PIVX: URI or payment request</source>
-        <translation>Abrir un PIVX: URI o solicitud de pago</translation>
+        <source>Open a Securypto: URI or payment request</source>
+        <translation>Abrir un Securypto: URI o solicitud de pago</translation>
     </message>
     <message>
         <source>&amp;Blockchain explorer</source>
@@ -725,12 +725,12 @@
         <translation>Ventana del explorador de bloques</translation>
     </message>
     <message>
-        <source>Show the PIVX Core help message to get a list with possible PIVX command-line options</source>
-        <translation>Mostrar la ayuda de PIVX Core para obtener una lista de posibles opciones en línea de comandos</translation>
+        <source>Show the Securypto Core help message to get a list with possible Securypto command-line options</source>
+        <translation>Mostrar la ayuda de Securypto Core para obtener una lista de posibles opciones en línea de comandos</translation>
     </message>
     <message>
-        <source>PIVX Core client</source>
-        <translation>Cliente PIVX Core</translation>
+        <source>Securypto Core client</source>
+        <translation>Cliente Securypto Core</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
@@ -1177,8 +1177,8 @@ MultiEnvío: %1</translation>
         <translation>Editar dirección de envío</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid PIVX address.</source>
-        <translation>La dirección introducida "%1" no es una dirección PIVX válida.</translation>
+        <source>The entered address "%1" is not a valid Securypto address.</source>
+        <translation>La dirección introducida "%1" no es una dirección Securypto válida.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -1234,16 +1234,16 @@ MultiEnvío: %1</translation>
         <translation>versión</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>Securypto Core</source>
+        <translation>Securypto Core</translation>
     </message>
     <message>
         <source>(%1-bit)</source>
         <translation>(%1-bit)</translation>
     </message>
     <message>
-        <source>About PIVX Core</source>
-        <translation>Acerca de PIVX Core</translation>
+        <source>About Securypto Core</source>
+        <translation>Acerca de Securypto Core</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -1289,16 +1289,16 @@ MultiEnvío: %1</translation>
         <translation>Bienvenido/a</translation>
     </message>
     <message>
-        <source>Welcome to PIVX Core.</source>
-        <translation>Bienvenido/a a PIVX Core.</translation>
+        <source>Welcome to Securypto Core.</source>
+        <translation>Bienvenido/a a Securypto Core.</translation>
     </message>
     <message>
-        <source>As this is the first time the program is launched, you can choose where PIVX Core will store its data.</source>
-        <translation>Al ser la primera vez que se inicia el programa, usted puede elegir dónde guardará PIVX Core sus datos.</translation>
+        <source>As this is the first time the program is launched, you can choose where Securypto Core will store its data.</source>
+        <translation>Al ser la primera vez que se inicia el programa, usted puede elegir dónde guardará Securypto Core sus datos.</translation>
     </message>
     <message>
-        <source>PIVX Core will download and store a copy of the PIVX block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>PIVX Core descargará y guardará una copia de la cadena de bloques PIVX. Por lo menos %1GB de datos serán guardados en esta carpeta, y crecerá con el tiempo. El monedero también se guardará en esta carpeta.</translation>
+        <source>Securypto Core will download and store a copy of the Securypto block chain. At least %1GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>Securypto Core descargará y guardará una copia de la cadena de bloques Securypto. Por lo menos %1GB de datos serán guardados en esta carpeta, y crecerá con el tiempo. El monedero también se guardará en esta carpeta.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -1309,8 +1309,8 @@ MultiEnvío: %1</translation>
         <translation>Usar una carpeta de datos personalizada:</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>Securypto Core</source>
+        <translation>Securypto Core</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -1451,12 +1451,12 @@ MultiEnvío: %1</translation>
         <translation>Introduzca Dirección a la cual Enviar</translation>
     </message>
     <message>
-        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other PIVX addresses after it matures.
-To Add: enter percentage to give and PIVX address to add to the MultiSend vector.
+        <source>MultiSend allows you to automatically send up to 100% of your stake or masternode reward to a list of other Securypto addresses after it matures.
+To Add: enter percentage to give and Securypto address to add to the MultiSend vector.
 To Delete: Enter address to delete and press delete.
 MultiSend will not be activated unless you have clicked Activate</source>
-        <translation>MultiEnvío le permite enviar automáticamente hasta el 100% de recompensa de participación o de nodo maestro a una lista de otras direcciones PIVX después de su maduración.
-Para Añadir: introduzca porcentaje a enviar y las direcciones PIVX a añadir al vector MultiEnvío.
+        <translation>MultiEnvío le permite enviar automáticamente hasta el 100% de recompensa de participación o de nodo maestro a una lista de otras direcciones Securypto después de su maduración.
+Para Añadir: introduzca porcentaje a enviar y las direcciones Securypto a añadir al vector MultiEnvío.
 Para Eliminar: Introduzca la dirección a eliminar y pulse la tecla delete.
 MultiEnvío no se activará a menos que haga usted click en Activar</translation>
     </message>
@@ -1690,8 +1690,8 @@ Por favor, tenga paciencia después de hacer clic en importar.</translation>
         <translation>Dirección / Cantidad:</translation>
     </message>
     <message>
-        <source>Add destinations to send PIV to</source>
-        <translation>Agregue los destinos para enviar PIV</translation>
+        <source>Add destinations to send SCU to</source>
+        <translation>Agregue los destinos para enviar SCU</translation>
     </message>
     <message>
         <source>Add &amp;Destination</source>
@@ -1789,48 +1789,48 @@ Por favor, tenga paciencia después de hacer clic en importar.</translation>
         <translation>Por favor seleccione un nivel de privacidad.</translation>
     </message>
     <message>
-        <source>Use 2 separate masternodes to mix funds up to 10000 PIV</source>
-        <translation>Use 2 masterdodes diferentes para mezclar los fondos hasta los 10000 PIV</translation>
+        <source>Use 2 separate masternodes to mix funds up to 10000 SCU</source>
+        <translation>Use 2 masterdodes diferentes para mezclar los fondos hasta los 10000 SCU</translation>
     </message>
     <message>
-        <source>Use 8 separate masternodes to mix funds up to 10000 PIV</source>
-        <translation>Use 8 masternodes diferentes para mezclar fondos hasta los 10000 PIV</translation>
+        <source>Use 8 separate masternodes to mix funds up to 10000 SCU</source>
+        <translation>Use 8 masternodes diferentes para mezclar fondos hasta los 10000 SCU</translation>
     </message>
     <message>
         <source>Use 16 separate masternodes</source>
         <translation>Use 16 masternodes diferentes</translation>
     </message>
     <message>
-        <source>This option is the quickest and will cost about ~0.025 PIV to anonymize 10000 PIV</source>
-        <translation>Esta opción es la más rápida y costará alrededor de ~0.025 PIV para anonimizar 10000 PIV</translation>
+        <source>This option is the quickest and will cost about ~0.025 SCU to anonymize 10000 SCU</source>
+        <translation>Esta opción es la más rápida y costará alrededor de ~0.025 SCU para anonimizar 10000 SCU</translation>
     </message>
     <message>
-        <source>This option is moderately fast and will cost about 0.05 PIV to anonymize 10000 PIV</source>
-        <translation>Esta opción es moderadamente rápida y costará cerca de 0.05 PIV para anonimizar 10000 PIV</translation>
+        <source>This option is moderately fast and will cost about 0.05 SCU to anonymize 10000 SCU</source>
+        <translation>Esta opción es moderadamente rápida y costará cerca de 0.05 SCU para anonimizar 10000 SCU</translation>
     </message>
     <message>
         <source>This is the slowest and most secure option. Using maximum anonymity will cost</source>
         <translation>Esta es la opción más lenta pero más segura. Usar el máximo anonimato costará</translation>
     </message>
     <message>
-        <source>0.1 PIV per 10000 PIV you anonymize.</source>
-        <translation>0.1 PIV por 10000 PIV que anonimizas.</translation>
+        <source>0.1 SCU per 10000 SCU you anonymize.</source>
+        <translation>0.1 SCU por 10000 SCU que anonimizas.</translation>
     </message>
     <message>
         <source>Obfuscation Configuration</source>
         <translation>Configuración de Ofuscación</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening PIVX's configuration screen.</source>
-        <translation>La Ofuscación se configuró correctamente en modo básico (%1 y 2 rondas). Puedes cambiar esto en cualquier momento accediendo a la ventana de configuración de PIVX.</translation>
+        <source>Obfuscation was successfully set to basic (%1 and 2 rounds). You can change this at any time by opening Securypto's configuration screen.</source>
+        <translation>La Ofuscación se configuró correctamente en modo básico (%1 y 2 rondas). Puedes cambiar esto en cualquier momento accediendo a la ventana de configuración de Securypto.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening PIVX's configuration screen.</source>
-        <translation>La Ofuscación se activó correctamente en modo alto (%1 y 8 rondas). Usted puede cambiar esto en cualquier momento abriendo la ventana de configuración de PIVX.</translation>
+        <source>Obfuscation was successfully set to high (%1 and 8 rounds). You can change this at any time by opening Securypto's configuration screen.</source>
+        <translation>La Ofuscación se activó correctamente en modo alto (%1 y 8 rondas). Usted puede cambiar esto en cualquier momento abriendo la ventana de configuración de Securypto.</translation>
     </message>
     <message>
-        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening PIVX's configuration screen.</source>
-        <translation>La Ofuscación se activó correctamente en su grado máximo (%1 y 16 rondas). Usted puede cambiar ésto en cualquier momento en la ventana de configuración de PIVX.</translation>
+        <source>Obfuscation was successfully set to maximum (%1 and 16 rounds). You can change this at any time by opening Securypto's configuration screen.</source>
+        <translation>La Ofuscación se activó correctamente en su grado máximo (%1 y 16 rondas). Usted puede cambiar ésto en cualquier momento en la ventana de configuración de Securypto.</translation>
     </message>
 </context>
 <context>
@@ -1891,8 +1891,8 @@ Por favor, tenga paciencia después de hacer clic en importar.</translation>
         <translation>Si deselecciona el gasto de cambio no confirmado, las entradas de una transacción&lt;br/&gt;no podrán ser usadas hasta que esa transacción tenga al menos una confirmación.&lt;br/&gt;Esto también afecta a cómo se calcula su balance actual.</translation>
     </message>
     <message>
-        <source>Automatically open the PIVX client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente PIVX en el enrutador. Ésto sólo funciona si su enrutador soporta UPnP y esta función está activada.</translation>
+        <source>Automatically open the Securypto client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente Securypto en el enrutador. Ésto sólo funciona si su enrutador soporta UPnP y esta función está activada.</translation>
     </message>
     <message>
         <source>Accept connections from outside</source>
@@ -1911,12 +1911,12 @@ Por favor, tenga paciencia después de hacer clic en importar.</translation>
         <translation>Experto</translation>
     </message>
     <message>
-        <source>Automatically start PIVX after logging in to the system.</source>
-        <translation>Arrancar PIVX automáticamente después de identificarse en el sistema.</translation>
+        <source>Automatically start Securypto after logging in to the system.</source>
+        <translation>Arrancar Securypto automáticamente después de identificarse en el sistema.</translation>
     </message>
     <message>
-        <source>&amp;Start PIVX on system login</source>
-        <translation>&amp;Arrancar PIVX al inicio del sistema</translation>
+        <source>&amp;Start Securypto on system login</source>
+        <translation>&amp;Arrancar Securypto al inicio del sistema</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1943,8 +1943,8 @@ Por favor, tenga paciencia después de hacer clic en importar.</translation>
         <translation>&amp;Red</translation>
     </message>
     <message>
-        <source>The user interface language can be set here. This setting will take effect after restarting PIVX.</source>
-        <translation>El idioma de interface de usuario puede seleccionarse aquí. Este ajuste tomará efecto después de reiniciar PIVX.</translation>
+        <source>The user interface language can be set here. This setting will take effect after restarting Securypto.</source>
+        <translation>El idioma de interface de usuario puede seleccionarse aquí. Este ajuste tomará efecto después de reiniciar Securypto.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
@@ -1957,36 +1957,36 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Mapear un puerto utilizando &amp;UPnP</translation>
     </message>
     <message>
-        <source>Enable automatic minting of PIV units to zPIV</source>
-        <translation>Activar el minting automática de unidades PIV a zPIV</translation>
+        <source>Enable automatic minting of SCU units to zSCU</source>
+        <translation>Activar el minting automática de unidades SCU a zSCU</translation>
     </message>
     <message>
-        <source>Enable zPIV Automint</source>
-        <translation>Activar zPIV Automint</translation>
+        <source>Enable zSCU Automint</source>
+        <translation>Activar zSCU Automint</translation>
     </message>
     <message>
-        <source>Percentage of incoming PIV which get automatically converted to zPIV via Zerocoin Protocol (min: 10%)</source>
-        <translation>Porcentaje de PIV entrantes que serán automáticamente convertidos a zPIV a través del Protocolo Zerocoin (mín: 10%)</translation>
+        <source>Percentage of incoming SCU which get automatically converted to zSCU via Zerocoin Protocol (min: 10%)</source>
+        <translation>Porcentaje de SCU entrantes que serán automáticamente convertidos a zSCU a través del Protocolo Zerocoin (mín: 10%)</translation>
     </message>
     <message>
-        <source>Percentage of autominted zPIV</source>
-        <translation>Porcentaje de zPIV autogenerados</translation>
+        <source>Percentage of autominted zSCU</source>
+        <translation>Porcentaje de zSCU autogenerados</translation>
     </message>
     <message>
-        <source>Wait with automatic conversion to Zerocoin until enough PIV for this denomination is available</source>
-        <translation>Esperar con la conversión automática a Zerocoin hasta que hayan suficientes PIV disponibles para este tamaño de billete</translation>
+        <source>Wait with automatic conversion to Zerocoin until enough SCU for this denomination is available</source>
+        <translation>Esperar con la conversión automática a Zerocoin hasta que hayan suficientes SCU disponibles para este tamaño de billete</translation>
     </message>
     <message>
-        <source>Preferred Automint zPIV Denomination</source>
-        <translation>Tamaño de billete zPIV preferido en la creación automática de dinero</translation>
+        <source>Preferred Automint zSCU Denomination</source>
+        <translation>Tamaño de billete zSCU preferido en la creación automática de dinero</translation>
     </message>
     <message>
         <source>Stake split threshold:</source>
         <translation>Parte limite de stake:</translation>
     </message>
     <message>
-        <source>Connect to the PIVX network through a SOCKS5 proxy.</source>
-        <translation>Conectar a la red PIVX mediante un proxy SOCKS5.</translation>
+        <source>Connect to the Securypto network through a SOCKS5 proxy.</source>
+        <translation>Conectar a la red Securypto mediante un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -2140,8 +2140,8 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Balance Total, incluidas todas las monedas no disponibles.</translation>
     </message>
     <message>
-        <source>PIV Balance</source>
-        <translation>Balance PIV</translation>
+        <source>SCU Balance</source>
+        <translation>Balance SCU</translation>
     </message>
     <message>
         <source>Pending:</source>
@@ -2164,18 +2164,18 @@ https://www.transifex.com/pivx-project/pivx-project-translations</translation>
         <translation>Saldo bloqueado actual en direcciones solo de lectura</translation>
     </message>
     <message>
-        <source>Your current PIVX balance, unconfirmed and immature transactions included</source>
-        <translation>Su balance PIVX actual, transacciones no confirmadas e inmaduras incluidas</translation>
+        <source>Your current Securypto balance, unconfirmed and immature transactions included</source>
+        <translation>Su balance Securypto actual, transacciones no confirmadas e inmaduras incluidas</translation>
     </message>
     <message>
-        <source>zPIV Balance</source>
-        <translation>Balance zPIV</translation>
+        <source>zSCU Balance</source>
+        <translation>Balance zSCU</translation>
     </message>
     <message>
         <source>Mature: more than 20 confirmation and more than 1 mint of the same denomination after it was minted.
-These zPIV are spendable.</source>
+These zSCU are spendable.</source>
         <translation>Maduración: más de 20 confirmaciones y más de 1 acuñación de la misma denominación después de acuñarse.
-Estas zPIV son utilizables.</translation>
+Estas zSCU son utilizables.</translation>
     </message>
     <message>
         <source>Unconfirmed: less than 20 confirmations
@@ -2184,8 +2184,8 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
 Inmaduro: confirmado, pero menos de 1 acuñación de la misma denominación después de ser acuñado</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the PIVX network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red PIVX después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Securypto network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Securypto después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>OVERVIEW</source>
@@ -2228,8 +2228,8 @@ Inmaduro: confirmado, pero menos de 1 acuñación de la misma denominación desp
         <translation>Disponible:</translation>
     </message>
     <message>
-        <source>Locked PIV or Masternode collaterals. These are excluded from zPIV minting.</source>
-        <translation>PIV bloqueado o Masternode colaterales. Estos están excluidos de minting zPIV.</translation>
+        <source>Locked SCU or Masternode collaterals. These are excluded from zSCU minting.</source>
+        <translation>SCU bloqueado o Masternode colaterales. Estos están excluidos de minting zSCU.</translation>
     </message>
     <message>
         <source>Locked:</source>
@@ -2240,8 +2240,8 @@ Inmaduro: confirmado, pero menos de 1 acuñación de la misma denominación desp
         <translation>Sin confirmar:</translation>
     </message>
     <message>
-        <source>Your current zPIV balance, unconfirmed and immature zPIV included.</source>
-        <translation>Su balance zPIV actual, zPIV inmaduro e inmaduro incluido.</translation>
+        <source>Your current zSCU balance, unconfirmed and immature zSCU included.</source>
+        <translation>Su balance zSCU actual, zSCU inmaduro e inmaduro incluido.</translation>
     </message>
     <message>
         <source>Recent transactions</source>
@@ -2252,10 +2252,10 @@ Inmaduro: confirmado, pero menos de 1 acuñación de la misma denominación desp
         <translation>desincronizado</translation>
     </message>
     <message>
-        <source>Current percentage of zPIV.
+        <source>Current percentage of zSCU.
 If AutoMint is enabled this percentage will settle around the configured AutoMint percentage (default = 10%).
 </source>
-        <translation>Porcentaje actual de zPIV.
+        <translation>Porcentaje actual de zSCU.
 Si AutoMint está habilitado, este porcentaje se establecerá alrededor del porcentaje de AutoMint configurado (predeterminado = 10%).
 </translation>
     </message>
@@ -2301,8 +2301,8 @@ Para habilitar AutoMint cambie 'enablezeromint = 0' a 'enablezeromint = 1' en pi
         <translation>No se puede iniciar pivx: módulo click-to-pay</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid PIVX address or malformed URI parameters.</source>
-        <translation>¡El identificador de la dirección no puede ser analizado! Esto puede ser causado por una dirección PIVX inválida o parámetros del identificador malformados.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Securypto address or malformed URI parameters.</source>
+        <translation>¡El identificador de la dirección no puede ser analizado! Esto puede ser causado por una dirección Securypto inválida o parámetros del identificador malformados.</translation>
     </message>
     <message>
         <source>Payment request file cannot be read! This can be caused by an invalid payment request file.</source>
@@ -2387,8 +2387,8 @@ Para habilitar AutoMint cambie 'enablezeromint = 0' a 'enablezeromint = 1' en pi
         <translation>Acciones Zerocoin:</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the PIVX network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red PIVX después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Securypto network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información mostrada puede estar desactualizada. Su monedero se sincroniza automáticamente con la red Securypto después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Mint Zerocoin</source>
@@ -2399,8 +2399,8 @@ Para habilitar AutoMint cambie 'enablezeromint = 0' a 'enablezeromint = 1' en pi
         <translation>0</translation>
     </message>
     <message>
-        <source>zPIV</source>
-        <translation>zPIV</translation>
+        <source>zSCU</source>
+        <translation>zSCU</translation>
     </message>
     <message>
         <source>Available for minting are coins which are confirmed and not locked or Masternode collaterals.</source>
@@ -2411,8 +2411,8 @@ Para habilitar AutoMint cambie 'enablezeromint = 0' a 'enablezeromint = 1' en pi
         <translation>Disponible para minting:</translation>
     </message>
     <message>
-        <source>0.000 000 00 PIV</source>
-        <translation>0.000 000 00 PIV</translation>
+        <source>0.000 000 00 SCU</source>
+        <translation>0.000 000 00 SCU</translation>
     </message>
     <message>
         <source>Reset Zerocoin Wallet DB. Deletes transactions that did not make it into the blockchain.</source>
@@ -2451,16 +2451,16 @@ Para habilitar AutoMint cambie 'enablezeromint = 0' a 'enablezeromint = 1' en pi
         <translation>PRIVACIDAD</translation>
     </message>
     <message>
-        <source>Enter an amount of Piv to convert to zPIV</source>
-        <translation>Introduzca la cantidad de PIV que desea convertir a zPiv</translation>
+        <source>Enter an amount of Piv to convert to zSCU</source>
+        <translation>Introduzca la cantidad de SCU que desea convertir a zPiv</translation>
     </message>
     <message>
-        <source>zPIV Control</source>
-        <translation>Control zPIV</translation>
+        <source>zSCU Control</source>
+        <translation>Control zSCU</translation>
     </message>
     <message>
-        <source>zPIV Selected:</source>
-        <translation>zPIV Seleccionados:</translation>
+        <source>zSCU Selected:</source>
+        <translation>zSCU Seleccionados:</translation>
     </message>
     <message>
         <source>Quantity Selected:</source>
@@ -2475,32 +2475,32 @@ Para habilitar AutoMint cambie 'enablezeromint = 0' a 'enablezeromint = 1' en pi
         <translation>Gastar Zerocoin</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zPIV for spending</source>
-        <translation>zPIV disponible (maduro y gastable) para gastar</translation>
+        <source>Available (mature and spendable) zSCU for spending</source>
+        <translation>zSCU disponible (maduro y gastable) para gastar</translation>
     </message>
     <message>
         <source>Available Balance:</source>
         <translation>Balance disponible:</translation>
     </message>
     <message>
-        <source>Available (mature and spendable) zPIV for spending
+        <source>Available (mature and spendable) zSCU for spending
 
-zPIV are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
-        <translation>zPIV disponible (maduro y gastable) para gastar
+zSCU are mature when they have more than 20 confirmations AND more than 2 mints of the same denomination after them were minted</source>
+        <translation>zSCU disponible (maduro y gastable) para gastar
 
-zPIV son maduros cuando tienen más de 20 confirmaciones Y más de 2 mints de la misma denominación después que ellos fueron minted</translation>
+zSCU son maduros cuando tienen más de 20 confirmaciones Y más de 2 mints de la misma denominación después que ellos fueron minted</translation>
     </message>
     <message>
-        <source>0 zPIV</source>
-        <translation>0 zPIV</translation>
+        <source>0 zSCU</source>
+        <translation>0 zSCU</translation>
     </message>
     <message>
         <source>Pay &amp;To:</source>
         <translation>Pagar &amp;A:</translation>
     </message>
     <message>
-        <source>The PIVX address to send the payment to. Creates local payment to yourself when empty.</source>
-        <translation>La dirección PIVX a la que enviar el pago. Si se deja en blanco, crea un pago a usted mismo.</translation>
+        <source>The Securypto address to send the payment to. Creates local payment to yourself when empty.</source>
+        <translation>La dirección Securypto a la que enviar el pago. Si se deja en blanco, crea un pago a usted mismo.</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2551,8 +2551,8 @@ zPIV son maduros cuando tienen más de 20 confirmaciones Y más de 2 mints de la
         <translation>Estadísticas Zerocoin:</translation>
     </message>
     <message>
-        <source>Total Balance including unconfirmed and immature zPIV</source>
-        <translation>Balance total incluyendo zPIV no confirmado e inmaduro</translation>
+        <source>Total Balance including unconfirmed and immature zSCU</source>
+        <translation>Balance total incluyendo zSCU no confirmado e inmaduro</translation>
     </message>
     <message>
         <source>Total Zerocoin  Balance:</source>
@@ -2573,24 +2573,24 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
 Inmaduro: confirmado, pero menos de 1 acuñación de la misma denominación después de ser acuñado</translation>
     </message>
     <message>
-        <source>Show the current status of automatic zPIV minting.
+        <source>Show the current status of automatic zSCU minting.
 
 To change the status (restart required):
 - enable: add 'enablezeromint=1' to pivx.conf
 - disable: add 'enablezeromint=0' to pivx.conf
 
 To change the percentage (no restart required):
-- menu Settings-&gt;Options-&gt;Percentage of autominted zPIV
+- menu Settings-&gt;Options-&gt;Percentage of autominted zSCU
 
 </source>
-        <translation>Muestra el estado actual de zPIV minting automática.
+        <translation>Muestra el estado actual de zSCU minting automática.
 
 Para cambiar el estado (reinicio requerido):
 - activar: añade 'enablezeromint = 1' en pivx.conf
 - desctivar: añade 'enablezeromint = 0' en pivx.conf
 
 Para cambiar el porcentaje (no se requiere reiniciar):
-- menú Configuración-&gt;Opciones-&gt;Porcentaje de zPIV automint
+- menú Configuración-&gt;Opciones-&gt;Porcentaje de zSCU automint
 </translation>
     </message>
     <message>
@@ -2778,12 +2778,12 @@ Maximum allowed: </source>
 Máximo permitido:</translation>
     </message>
     <message>
-        <source>zPIV Spend #: </source>
-        <translation>Gastar zPIV #: </translation>
+        <source>zSCU Spend #: </source>
+        <translation>Gastar zSCU #: </translation>
     </message>
     <message>
-        <source>zPIV Mint</source>
-        <translation>Acuñar zPIV</translation>
+        <source>zSCU Mint</source>
+        <translation>Acuñar zSCU</translation>
     </message>
     <message>
         <source> &lt;b&gt;enabled&lt;/b&gt;.</source>
@@ -2798,12 +2798,12 @@ Máximo permitido:</translation>
         <translation>Porcentaje objetivo configurado:</translation>
     </message>
     <message>
-        <source>zPIV is currently disabled due to maintenance.</source>
-        <translation>zPIV actualmente está desactivado debido al mantenimiento.</translation>
+        <source>zSCU is currently disabled due to maintenance.</source>
+        <translation>zSCU actualmente está desactivado debido al mantenimiento.</translation>
     </message>
     <message>
-        <source>zPIV is currently undergoing maintenance.</source>
-        <translation>zPIV se encuentra actualmente en mantenimiento.</translation>
+        <source>zSCU is currently undergoing maintenance.</source>
+        <translation>zSCU se encuentra actualmente en mantenimiento.</translation>
     </message>
     <message>
         <source>Denom. with value &lt;b&gt;1&lt;/b&gt;:</source>
@@ -2890,8 +2890,8 @@ Máximo permitido:</translation>
         <translation>Minted correctamente</translation>
     </message>
     <message>
-        <source> zPIV in </source>
-        <translation>zPIV en</translation>
+        <source> zSCU in </source>
+        <translation>zSCU en</translation>
     </message>
     <message>
         <source> sec. Used denominations:
@@ -2919,7 +2919,7 @@ Máximo permitido:</translation>
     </message>
     <message>
         <source>Invalid Pivx Address</source>
-        <translation>Dirección PIVX Inválida</translation>
+        <translation>Dirección Securypto Inválida</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -3006,8 +3006,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Cantidad</translation>
     </message>
     <message>
-        <source>Enter a PIVX address (e.g. %1)</source>
-        <translation>Introduzca una dirección PIVX (p.e. %1)</translation>
+        <source>Enter a Securypto address (e.g. %1)</source>
+        <translation>Introduzca una dirección Securypto (p.e. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -3050,8 +3050,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>%1 ms</translation>
     </message>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>Securypto Core</source>
+        <translation>Securypto Core</translation>
     </message>
     </context>
 <context>
@@ -3148,8 +3148,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Blockchain</translation>
     </message>
     <message>
-        <source>Open the PIVX debug log file from the current data directory. This can take a few seconds for large log files.</source>
-        <translation>Abrir el fichero de depuración PIVX en el directorio actual de datos. Esto puede llevar unos segundos para ficheros de depuración grandes.</translation>
+        <source>Open the Securypto debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>Abrir el fichero de depuración Securypto en el directorio actual de datos. Esto puede llevar unos segundos para ficheros de depuración grandes.</translation>
     </message>
     <message>
         <source>Number of Masternodes</source>
@@ -3284,8 +3284,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Ruta personalizada de la copia de seguridad:</translation>
     </message>
     <message>
-        <source>Custom zPIV Backup Path:</source>
-        <translation>Ruta personalizada de la copia de seguridad zPIV:</translation>
+        <source>Custom zSCU Backup Path:</source>
+        <translation>Ruta personalizada de la copia de seguridad zSCU:</translation>
     </message>
     <message>
         <source>Custom Backups Threshold:</source>
@@ -3364,8 +3364,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Fuera:</translation>
     </message>
     <message>
-        <source>Welcome to the PIVX RPC console.</source>
-        <translation>Bienvenido a la consola RPC de PIVX.</translation>
+        <source>Welcome to the Securypto RPC console.</source>
+        <translation>Bienvenido a la consola RPC de Securypto.</translation>
     </message>
     <message>
         <source>&amp;Disconnect Node</source>
@@ -3491,16 +3491,16 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Cantidad:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the PIVX network.</source>
-        <translation>Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. Nota: El mensaje no se envía junto al pago por la red PIVX.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Securypto network.</source>
+        <translation>Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. Nota: El mensaje no se envía junto al pago por la red Securypto.</translation>
     </message>
     <message>
         <source>RECEIVE</source>
         <translation>RECIBIR</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the PIVX network.</source>
-        <translation>Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. &lt;br&gt;Nota: El mensaje no se envía junto al pago por la red PIVX.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened.&lt;br&gt;Note: The message will not be sent with the payment over the Securypto network.</source>
+        <translation>Un mensaje opcional a adjuntar a la solicitud de pago, que será mostrado cuando se abra la solicitud. &lt;br&gt;Nota: El mensaje no se envía junto al pago por la red Securypto.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -3732,8 +3732,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Tamaño de UTXO:</translation>
     </message>
     <message>
-        <source>0 PIV</source>
-        <translation>0 PIV</translation>
+        <source>0 SCU</source>
+        <translation>0 SCU</translation>
     </message>
     <message>
         <source>Transaction Fee:</source>
@@ -3788,16 +3788,16 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Monedas seleccionadas automáticamente</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uPIVs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uPIVs in fee,&lt;br /&gt;while "at least" pays 1000 uPIVs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Si la comisión personalizada se fija en 1000 uPIVs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uPIVs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uPIVs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uSCUs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uSCUs in fee,&lt;br /&gt;while "at least" pays 1000 uSCUs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Si la comisión personalizada se fija en 1000 uSCUs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uSCUs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uSCUs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
     </message>
     <message>
-        <source>If the custom fee is set to 1000 uPIVs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uPIVs in fee,&lt;br /&gt;while "total at least" pays 1000 uPIVs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
-        <translation>Si la comisión personalizada se fija en 1000 uPIVs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uPIVs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uPIVs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
+        <source>If the custom fee is set to 1000 uSCUs and the transaction is only 250 bytes, then "per kilobyte" only pays 250 uSCUs in fee,&lt;br /&gt;while "total at least" pays 1000 uSCUs. For transactions bigger than a kilobyte both pay by kilobyte.</source>
+        <translation>Si la comisión personalizada se fija en 1000 uSCUs y la transacción necesita sólo 250 bytes, entonces la opción "por kilobyte" sólo pagará 250 uSCUs de comisión,&lt;br/&gt;mientras "por lo menos" pagará 1000 uSCUs. Para transacciones que midan más de un kilobyte ambas pagan por kilobyte.</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for PIVX transactions than the network can process.</source>
-        <translation>Pagar sólo la comisión mínima está bien mientras haya menos volumen de transacciones que espacio en los bloques.&lt;br/&gt;Pero tenga en cuenta que esto podría acabar en una transacción que nunca se confirme si hay más demanda de transacciones PIVX de las que la red puede procesar.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks.&lt;br /&gt;But be aware that this can end up in a never confirming transaction once there is more demand for Securypto transactions than the network can process.</source>
+        <translation>Pagar sólo la comisión mínima está bien mientras haya menos volumen de transacciones que espacio en los bloques.&lt;br/&gt;Pero tenga en cuenta que esto podría acabar en una transacción que nunca se confirme si hay más demanda de transacciones Securypto de las que la red puede procesar.</translation>
     </message>
     <message>
         <source>normal</source>
@@ -3844,8 +3844,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Añadir Destinatario</translation>
     </message>
     <message>
-        <source>Anonymized PIV</source>
-        <translation>PIV anonimizados</translation>
+        <source>Anonymized SCU</source>
+        <translation>SCU anonimizados</translation>
     </message>
     <message>
         <source>Balance:</source>
@@ -3892,8 +3892,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>La herramienta de división de bloques no funciona con varias direcciones. Inténtelo otra vez.</translation>
     </message>
     <message>
-        <source>Warning: Invalid PIVX address</source>
-        <translation>Advertencia: Direcciones PIVX inválidas</translation>
+        <source>Warning: Invalid Securypto address</source>
+        <translation>Advertencia: Direcciones Securypto inválidas</translation>
     </message>
     <message>
         <source>%1 to %2</source>
@@ -3991,8 +3991,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Pagar &amp;A:</translation>
     </message>
     <message>
-        <source>The PIVX address to send the payment to</source>
-        <translation>La dirección PIVX a la cual enviar el pago</translation>
+        <source>The Securypto address to send the payment to</source>
+        <translation>La dirección Securypto a la cual enviar el pago</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4031,8 +4031,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Mensaje:</translation>
     </message>
     <message>
-        <source>A message that was attached to the PIVX: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the PIVX network.</source>
-        <translation>Un mensaje adjunto al PIVX: En recurso web especificado será guardado junto a la transacción para su referencia. Nota: Este mensaje no se enviará por la red PIVX.</translation>
+        <source>A message that was attached to the Securypto: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Securypto network.</source>
+        <translation>Un mensaje adjunto al Securypto: En recurso web especificado será guardado junto a la transacción para su referencia. Nota: Este mensaje no se enviará por la red Securypto.</translation>
     </message>
     <message>
         <source>This is an unverified payment request.</source>
@@ -4058,8 +4058,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
 <context>
     <name>ShutdownWindow</name>
     <message>
-        <source>PIVX Core is shutting down...</source>
-        <translation>El programa PIVX se está cerrando...</translation>
+        <source>Securypto Core is shutting down...</source>
+        <translation>El programa Securypto se está cerrando...</translation>
     </message>
     <message>
         <source>Do not shut down the computer until this window disappears.</source>
@@ -4081,8 +4081,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Usted puede firmar mensajes con su dirección para probar que son auténticos. Tenga cuidado con firmar algo corto o vago como "hola", pues los ataques de phising pueden engañarle para que firme su identidad para ellos. Sólo firme textos detallados con los que esté de acuerdo.</translation>
     </message>
     <message>
-        <source>The PIVX address to sign the message with</source>
-        <translation>La dirección PIVX con la que desee firmar el mensaje</translation>
+        <source>The Securypto address to sign the message with</source>
+        <translation>La dirección Securypto con la que desee firmar el mensaje</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -4113,16 +4113,16 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this PIVX address</source>
-        <translation>Firme el mensaje para demostrar que eres el propietario de esta dirección PIVX</translation>
+        <source>Sign the message to prove you own this Securypto address</source>
+        <translation>Firme el mensaje para demostrar que eres el propietario de esta dirección Securypto</translation>
     </message>
     <message>
-        <source>The PIVX address the message was signed with</source>
-        <translation>La dirección PIVX con la que se firmó el mensaje</translation>
+        <source>The Securypto address the message was signed with</source>
+        <translation>La dirección Securypto con la que se firmó el mensaje</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified PIVX address</source>
-        <translation>Verifica el mensaje para asegurar que fue firmado con la dirección PIVX especificada</translation>
+        <source>Verify the message to ensure it was signed with the specified Securypto address</source>
+        <translation>Verifica el mensaje para asegurar que fue firmado con la dirección Securypto especificada</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -4208,8 +4208,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
 <context>
     <name>SplashScreen</name>
     <message>
-        <source>PIVX Core</source>
-        <translation>PIVX Core</translation>
+        <source>Securypto Core</source>
+        <translation>Securypto Core</translation>
     </message>
     <message>
         <source>Version %1</source>
@@ -4224,8 +4224,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Los desarrolladores de Dash Core</translation>
     </message>
     <message>
-        <source>The PIVX Core developers</source>
-        <translation>Los desarrolladores de PIVX Core</translation>
+        <source>The Securypto Core developers</source>
+        <translation>Los desarrolladores de Securypto Core</translation>
     </message>
     <message>
         <source>[testnet]</source>
@@ -4488,12 +4488,12 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Recibido por medio de Ofuscación</translation>
     </message>
     <message>
-        <source>PIV Stake</source>
-        <translation>Stake PIV</translation>
+        <source>SCU Stake</source>
+        <translation>Stake SCU</translation>
     </message>
     <message>
-        <source>zPIV Stake</source>
-        <translation>Stake zPIV</translation>
+        <source>zSCU Stake</source>
+        <translation>Stake zSCU</translation>
     </message>
     <message>
         <source>Obfuscation Denominate</source>
@@ -4512,32 +4512,32 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Ofuscación Crea Billetes</translation>
     </message>
     <message>
-        <source>Converted PIV to zPIV</source>
-        <translation>PIV convertidos a zPIV</translation>
+        <source>Converted SCU to zSCU</source>
+        <translation>SCU convertidos a zSCU</translation>
     </message>
     <message>
-        <source>Spent zPIV</source>
-        <translation>Gastar zPIV</translation>
+        <source>Spent zSCU</source>
+        <translation>Gastar zSCU</translation>
     </message>
     <message>
-        <source>Received PIV from zPIV</source>
-        <translation>PIV recibidos desde zPIV</translation>
+        <source>Received SCU from zSCU</source>
+        <translation>SCU recibidos desde zSCU</translation>
     </message>
     <message>
-        <source>Minted Change as zPIV from zPIV Spend</source>
-        <translation>Cambio de acuñación en zPIV al Gastar zPIV</translation>
+        <source>Minted Change as zSCU from zSCU Spend</source>
+        <translation>Cambio de acuñación en zSCU al Gastar zSCU</translation>
     </message>
     <message>
-        <source>Converted zPIV to PIV</source>
-        <translation>zPIV convertidos a PIV</translation>
+        <source>Converted zSCU to SCU</source>
+        <translation>zSCU convertidos a SCU</translation>
     </message>
     <message>
-        <source>Anonymous (zPIV Transaction)</source>
-        <translation>Anónimo (Transacción zPIV)</translation>
+        <source>Anonymous (zSCU Transaction)</source>
+        <translation>Anónimo (Transacción zSCU)</translation>
     </message>
     <message>
-        <source>Anonymous (zPIV Stake)</source>
-        <translation>Anónimo (Stake zPIV)</translation>
+        <source>Anonymous (zSCU Stake)</source>
+        <translation>Anónimo (Stake zSCU)</translation>
     </message>
     <message>
         <source>Sent to</source>
@@ -4747,12 +4747,12 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Exportación Correcta</translation>
     </message>
     <message>
-        <source>Received PIV from zPIV</source>
-        <translation>PIV recibidos desde zPIV</translation>
+        <source>Received SCU from zSCU</source>
+        <translation>SCU recibidos desde zSCU</translation>
     </message>
     <message>
-        <source>Zerocoin Spend, Change in zPIV</source>
-        <translation>Gastar Zerocoin, Cambio en zPIV</translation>
+        <source>Zerocoin Spend, Change in zSCU</source>
+        <translation>Gastar Zerocoin, Cambio en zSCU</translation>
     </message>
     <message>
         <source>The transaction history was successfully saved to %1.</source>
@@ -4788,8 +4788,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Enviar Monedas</translation>
     </message>
     <message>
-        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 PIV.</source>
-        <translation>SwiftTX no soporta el envío de importes tan altos todavía. Las transacciones están actualmente limitadas a %1 PIV.</translation>
+        <source>SwiftX doesn't support sending values that high yet. Transactions are currently limited to %1 SCU.</source>
+        <translation>SwiftTX no soporta el envío de importes tan altos todavía. Las transacciones están actualmente limitadas a %1 SCU.</translation>
     </message>
 </context>
 <context>
@@ -4822,8 +4822,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
 <context>
     <name>ZPivControlDialog</name>
     <message>
-        <source>Select zPIV to Spend</source>
-        <translation>Selecciona zPIV para Gastar</translation>
+        <source>Select zSCU to Spend</source>
+        <translation>Selecciona zSCU para Gastar</translation>
     </message>
     <message>
         <source>Quantity</source>
@@ -4834,8 +4834,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>0</translation>
     </message>
     <message>
-        <source>zPIV</source>
-        <translation>zPIV</translation>
+        <source>zSCU</source>
+        <translation>zSCU</translation>
     </message>
     <message>
         <source>Select/Deselect All</source>
@@ -4869,8 +4869,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>El punto de chequeo del acumulador que hemos calculado no coincide con lo guardado en el índice de bloques</translation>
     </message>
     <message>
-        <source>Cannot obtain a lock on data directory %s. PIVX Core is probably already running.</source>
-        <translation>No se puede obtener un bloqueo sobre el directorio de datos %s. PIVX Core esta probablemente en ejecución.</translation>
+        <source>Cannot obtain a lock on data directory %s. Securypto Core is probably already running.</source>
+        <translation>No se puede obtener un bloqueo sobre el directorio de datos %s. Securypto Core esta probablemente en ejecución.</translation>
     </message>
     <message>
         <source>Change automatic finalized budget voting behavior. mode=auto: Vote for only exact finalized budget match to my generated budget. (string, default: auto)</source>
@@ -4897,16 +4897,16 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Distribuido bajo licencia MIT software license, ver el archivo adjunto COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;</translation>
     </message>
     <message>
-        <source>Enable automatic wallet backups triggered after each zPIV minting (0-1, default: %u)</source>
-        <translation>Habilite copias de seguridad automáticas del monedero que se activan después de cada acuñación zPIV (0-1, predeterminado: %u)</translation>
+        <source>Enable automatic wallet backups triggered after each zSCU minting (0-1, default: %u)</source>
+        <translation>Habilite copias de seguridad automáticas del monedero que se activan después de cada acuñación zSCU (0-1, predeterminado: %u)</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for PIV inputs (0-1, default: %u)</source>
-        <translation>Habilitar o deshabilitar la funcionalidad de staking para las entradas PIV (0-1, predeterminado: %u)</translation>
+        <source>Enable or disable staking functionality for SCU inputs (0-1, default: %u)</source>
+        <translation>Habilitar o deshabilitar la funcionalidad de staking para las entradas SCU (0-1, predeterminado: %u)</translation>
     </message>
     <message>
-        <source>Enable or disable staking functionality for zPIV inputs (0-1, default: %u)</source>
-        <translation>Habilitar o deshabilitar la funcionalidad de staking para las entradas zPIV (0-1, predeterminado: %u)</translation>
+        <source>Enable or disable staking functionality for zSCU inputs (0-1, default: %u)</source>
+        <translation>Habilitar o deshabilitar la funcionalidad de staking para las entradas zSCU (0-1, predeterminado: %u)</translation>
     </message>
     <message>
         <source>Enable spork administration functionality with the appropriate private key.</source>
@@ -4941,12 +4941,12 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Ejecutar comando cuando el mejor bloque cambie (%s en cmd es reemplazado por el block hash)</translation>
     </message>
     <message>
-        <source>Fees (in PIV/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
-        <translation>Comisiones (en PIV/Kb) menores a esta son consideradas gratuitas para la propagación de la transacción (default: %s)</translation>
+        <source>Fees (in SCU/Kb) smaller than this are considered zero fee for relaying (default: %s)</source>
+        <translation>Comisiones (en SCU/Kb) menores a esta son consideradas gratuitas para la propagación de la transacción (default: %s)</translation>
     </message>
     <message>
-        <source>Fees (in PIV/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
-        <translation>Comisiones (en PIV/Kb) menores a esta son consideradas gratuitas para la creación de la transacción (default: %s)</translation>
+        <source>Fees (in SCU/Kb) smaller than this are considered zero fee for transaction creation (default: %s)</source>
+        <translation>Comisiones (en SCU/Kb) menores a esta son consideradas gratuitas para la creación de la transacción (default: %s)</translation>
     </message>
     <message>
         <source>Flush database activity from memory pool to disk log every &lt;n&gt; megabytes (default: %u)</source>
@@ -5045,20 +5045,20 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Este producto incluye software desarrollado por el Proyecto OpenSSL para uso en OpenSSL Toolkit &lt;https://www.openssl.org/&gt; y software de cifrado escrito por Eric Young y software de UPnP escrito por Thomas Bernard.</translation>
     </message>
     <message>
-        <source>Unable to bind to %s on this computer. PIVX Core is probably already running.</source>
-        <translation>Imposible conectar a %s en esta computadora. Es probable que PIVX Core ya este corriendo.</translation>
+        <source>Unable to bind to %s on this computer. Securypto Core is probably already running.</source>
+        <translation>Imposible conectar a %s en esta computadora. Es probable que Securypto Core ya este corriendo.</translation>
     </message>
     <message>
         <source>Unable to locate enough Obfuscation denominated funds for this transaction.</source>
         <translation>Imposible localizar suficientes fondos denominados de Ofuscación para esta transacción.</translation>
     </message>
     <message>
-        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 PIV.</source>
-        <translation>Imposible localizar suficientes fondos no-denominados de Ofuscación para esta transacción que no es igual a 10000 PIV.</translation>
+        <source>Unable to locate enough Obfuscation non-denominated funds for this transaction that are not equal 10000 SCU.</source>
+        <translation>Imposible localizar suficientes fondos no-denominados de Ofuscación para esta transacción que no es igual a 10000 SCU.</translation>
     </message>
     <message>
-        <source>Unable to locate enough funds for this transaction that are not equal 10000 PIV.</source>
-        <translation>Imposible localizar fondos suficientes para esta transacción que no es igual a 10000 PIV.</translation>
+        <source>Unable to locate enough funds for this transaction that are not equal 10000 SCU.</source>
+        <translation>Imposible localizar fondos suficientes para esta transacción que no es igual a 10000 SCU.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services (default: %s)</source>
@@ -5073,8 +5073,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Advertencia: -paytxfee esta muy alta! Esta es la comisión de transacción que pagarás si envías una transacción.</translation>
     </message>
     <message>
-        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong PIVX Core will not work properly.</source>
-        <translation>Advertencia: Por favor verifique que la fecha y hora de su computadora sean correctas! Si su reloj esta fuera de hora PIVX Core no funcionará adecuadamente.</translation>
+        <source>Warning: Please check that your computer's date and time are correct! If your clock is wrong Securypto Core will not work properly.</source>
+        <translation>Advertencia: Por favor verifique que la fecha y hora de su computadora sean correctas! Si su reloj esta fuera de hora Securypto Core no funcionará adecuadamente.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -5313,8 +5313,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Error al cargar wallet.dat: Monedero dañado</translation>
     </message>
     <message>
-        <source>Error loading wallet.dat: Wallet requires newer version of PIVX Core</source>
-        <translation>Error al cargar wallet.dat: El monedero requiere una nueva versión del PIVX Core</translation>
+        <source>Error loading wallet.dat: Wallet requires newer version of Securypto Core</source>
+        <translation>Error al cargar wallet.dat: El monedero requiere una nueva versión del Securypto Core</translation>
     </message>
     <message>
         <source>Error opening block database</source>
@@ -5377,8 +5377,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Falló al leer el bloque</translation>
     </message>
     <message>
-        <source>Fee (in PIV/kB) to add to transactions you send (default: %s)</source>
-        <translation>Comisión (en PIV/kB) para agregar a la transacción que envías (predeterminado: %s)</translation>
+        <source>Fee (in SCU/kB) to add to transactions you send (default: %s)</source>
+        <translation>Comisión (en SCU/kB) para agregar a la transacción que envías (predeterminado: %s)</translation>
     </message>
     <message>
         <source>Finalizing transaction.</source>
@@ -5437,8 +5437,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Información</translation>
     </message>
     <message>
-        <source>Initialization sanity check failed. PIVX Core is shutting down.</source>
-        <translation>La prueba de salud de inicialización ha fallado. PIVX Core se cerrará.</translation>
+        <source>Initialization sanity check failed. Securypto Core is shutting down.</source>
+        <translation>La prueba de salud de inicialización ha fallado. Securypto Core se cerrará.</translation>
     </message>
     <message>
         <source>Input is not valid.</source>
@@ -5509,8 +5509,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Porcentaje de Zerocoin creadas automáticamente (10-100, por defecto: %u)</translation>
     </message>
     <message>
-        <source>Reindex the PIV and zPIV money supply statistics</source>
-        <translation>Reindexar as estatísticas de fornecimento de dinheiro PIV e zPIV</translation>
+        <source>Reindex the SCU and zSCU money supply statistics</source>
+        <translation>Reindexar as estatísticas de fornecimento de dinheiro SCU e zSCU</translation>
     </message>
     <message>
         <source>Reindexing zerocoin database...</source>
@@ -5549,8 +5549,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
 </translation>
     </message>
     <message>
-        <source>Disable all PIVX specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
-        <translation>Desabilitar toda la funcionalidad especifica PIVX (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, predeterminado: %u)</translation>
+        <source>Disable all Securypto specific functionality (Masternodes, Zerocoin, SwiftX, Budgeting) (0-1, default: %u)</source>
+        <translation>Desabilitar toda la funcionalidad especifica Securypto (Masternodes, Obfuscation, SwiftTX, Budgeting) (0-1, predeterminado: %u)</translation>
     </message>
     <message>
         <source>Enable SwiftX, show confirmations for locked transactions (bool, default: %s)</source>
@@ -5585,8 +5585,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Denominación preferida para acuñado automatico de Zerocoin (1/5/10/50/100/500/1000/5000), 0 para ninguna preferencia. predeterminado: %u)</translation>
     </message>
     <message>
-        <source>Specify custom backup path to add a copy of any automatic zPIV backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
-        <translation>Especifique la ruta de copia de seguridad personalizada para agregar una copia de cualquier copia de seguridad zPIV automática. Si se establece como directorio, cada copia de seguridad genera un archivo con marcas de tiempo. Si se establece como archivo, se reescribirá en ese archivo cada copia de seguridad. Si también se establece backuppath, se realizarán 4 copias de seguridad</translation>
+        <source>Specify custom backup path to add a copy of any automatic zSCU backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup. If backuppath is set as well, 4 backups will happen</source>
+        <translation>Especifique la ruta de copia de seguridad personalizada para agregar una copia de cualquier copia de seguridad zSCU automática. Si se establece como directorio, cada copia de seguridad genera un archivo con marcas de tiempo. Si se establece como archivo, se reescribirá en ese archivo cada copia de seguridad. Si también se establece backuppath, se realizarán 4 copias de seguridad</translation>
     </message>
     <message>
         <source>Specify custom backup path to add a copy of any wallet backup. If set as dir, every backup generates a timestamped file. If set as file, will rewrite to that file every backup.</source>
@@ -6081,8 +6081,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Sincronizando con la red... </translation>
     </message>
     <message>
-        <source>Syncing zPIV wallet...</source>
-        <translation>Sincronizando el monedero zPIV...</translation>
+        <source>Syncing zSCU wallet...</source>
+        <translation>Sincronizando el monedero zSCU...</translation>
     </message>
     <message>
         <source>The coin spend has been used</source>
@@ -6221,8 +6221,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Nombre de usuario para conexiones JSON-RPC</translation>
     </message>
     <message>
-        <source>Value is below the smallest available denomination (= 1) of zPIV</source>
-        <translation>El valor está por debajo de la denominación más pequeña disponible (= 1) de zPIV</translation>
+        <source>Value is below the smallest available denomination (= 1) of zSCU</source>
+        <translation>El valor está por debajo de la denominación más pequeña disponible (= 1) de zSCU</translation>
     </message>
     <message>
         <source>Value more than Obfuscation pool maximum allows.</source>
@@ -6245,8 +6245,8 @@ O mint las denominaciones más altas (por lo tanto, se necesitan menos datos) o 
         <translation>Monedero bloqueado.</translation>
     </message>
     <message>
-        <source>Wallet needed to be rewritten: restart PIVX Core to complete</source>
-        <translation>El Monedero necesita ser reescrito: reinicie PIVX Core para completar</translation>
+        <source>Wallet needed to be rewritten: restart Securypto Core to complete</source>
+        <translation>El Monedero necesita ser reescrito: reinicie Securypto Core para completar</translation>
     </message>
     <message>
         <source>Wallet options:</source>

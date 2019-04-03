@@ -141,7 +141,7 @@ void ZPivControlDialog::updateList()
             if(nConfirmations < Params().Zerocoin_MintRequiredConfirmations())
                 strReason = strprintf("Needs %d more confirmations", Params().Zerocoin_MintRequiredConfirmations() - nConfirmations);
             else if (!mint.isSeedCorrect)
-                strReason = "The zPIV seed used to mint this zPIV is not the same as currently hold in the wallet";
+                strReason = "The zSCU seed used to mint this zSCU is not the same as currently hold in the wallet";
             else
                 strReason = strprintf("Needs %d more mints added to network", Params().Zerocoin_RequiredAccumulation());
 
