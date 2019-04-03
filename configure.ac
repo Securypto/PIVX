@@ -1,11 +1,11 @@
 dnl require autoconf 2.60 (AS_ECHO/AS_ECHO_N)
 AC_PREREQ([2.60])
-define(_CLIENT_VERSION_MAJOR, 3)
-define(_CLIENT_VERSION_MINOR, 1)
-define(_CLIENT_VERSION_REVISION, 99)
+define(_CLIENT_VERSION_MAJOR, 1)
+define(_CLIENT_VERSION_MINOR, 0)
+define(_CLIENT_VERSION_REVISION, 3)
 define(_CLIENT_VERSION_BUILD, 0)
-define(_CLIENT_VERSION_IS_RELEASE, false)
-define(_COPYRIGHT_YEAR, 2018)
+define(_CLIENT_VERSION_IS_RELEASE, true)
+define(_COPYRIGHT_YEAR, 2019)
 AC_INIT([Securypto Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[www.securypto.org],[securypto])
 AC_CONFIG_SRCDIR([src/main.cpp])
 AC_CONFIG_HEADERS([src/config/securypto-config.h])
@@ -114,9 +114,9 @@ AC_ARG_WITH([miniupnpc],
 
 AC_ARG_ENABLE([upnp-default],
   [AS_HELP_STRING([--enable-upnp-default],
-  [if UPNP is enabled, turn it on at startup (default is no)])],
+  [if UPNP is enabled, turn it on at startup (default is yes)])],
   [use_upnp_default=$enableval],
-  [use_upnp_default=no])
+  [use_upnp_default=yes])
 
 AC_ARG_ENABLE(tests,
     AS_HELP_STRING([--disable-tests],[do not compile tests (default is to compile)]),
