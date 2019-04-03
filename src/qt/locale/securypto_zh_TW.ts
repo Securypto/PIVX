@@ -565,8 +565,8 @@
         <translation>送出錢幣到 Securypto 地址</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
-        <translation>請求付款 (會產生 QR Code跟 pivx 位址)</translation>
+        <source>Request payments (generates QR codes and securypto: URIs)</source>
+        <translation>請求付款 (會產生 QR Code跟 securypto 位址)</translation>
     </message>
     <message>
         <source>&amp;Masternodes</source>
@@ -974,6 +974,6 @@
     <name>ZPivControlDialog</name>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>securypto-core</name>
     </context>
 </TS>

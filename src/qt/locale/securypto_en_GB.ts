@@ -657,8 +657,8 @@
         <translation>Send coins to a Securypto address</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
-        <translation>Request payments (generates QR codes and pivx: URIs)</translation>
+        <source>Request payments (generates QR codes and securypto: URIs)</source>
+        <translation>Request payments (generates QR codes and securypto: URIs)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -896,8 +896,8 @@ Address: %4
         <translation>TextLabel</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (pivx.conf).</source>
-        <translation>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (pivx.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (securypto.conf).</source>
+        <translation>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (securypto.conf).</translation>
     </message>
 </context>
 <context>
@@ -1984,9 +1984,9 @@ Please be patient after clicking import.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://www.transifex.com/securypto-project/securypto-project-translations</source>
         <translation>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</translation>
+https://www.transifex.com/securypto-project/securypto-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -2308,14 +2308,14 @@ If AutoMint is enabled this percentage will settle around the configured AutoMin
         <translation>AutoMint is currently enabled and set to </translation>
     </message>
     <message>
-        <source>To disable AutoMint add 'enablezeromint=0' in pivx.conf.</source>
-        <translation>To disable AutoMint add 'enablezeromint=0' in pivx.conf.</translation>
+        <source>To disable AutoMint add 'enablezeromint=0' in securypto.conf.</source>
+        <translation>To disable AutoMint add 'enablezeromint=0' in securypto.conf.</translation>
     </message>
     <message>
         <source>AutoMint is currently disabled.
-To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in pivx.conf</source>
+To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in securypto.conf</source>
         <translation>AutoMint is currently disabled.
-To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in pivx.conf</translation>
+To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in securypto.conf</translation>
     </message>
 </context>
 <context>
@@ -2341,8 +2341,8 @@ To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in pivx.conf<
         <translation>Invalid payment address %1</translation>
     </message>
     <message>
-        <source>Cannot start pivx: click-to-pay handler</source>
-        <translation>Cannot start pivx: click-to-pay handler</translation>
+        <source>Cannot start securypto: click-to-pay handler</source>
+        <translation>Cannot start securypto: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Securypto address or malformed URI parameters.</source>
@@ -2620,8 +2620,8 @@ Immature: confirmed, but less than 1 mint of the same denomination after it was 
         <source>Show the current status of automatic zSCU minting.
 
 To change the status (restart required):
-- enable: add 'enablezeromint=1' to pivx.conf
-- disable: add 'enablezeromint=0' to pivx.conf
+- enable: add 'enablezeromint=1' to securypto.conf
+- disable: add 'enablezeromint=0' to securypto.conf
 
 To change the percentage (no restart required):
 - menu Settings-&gt;Options-&gt;Percentage of autominted zSCU
@@ -2630,8 +2630,8 @@ To change the percentage (no restart required):
         <translation>Show the current status of automatic zSCU minting.
 
 To change the status (restart required):
-- enable: add 'enablezeromint=1' to pivx.conf
-- disable: add 'enablezeromint=0' to pivx.conf
+- enable: add 'enablezeromint=1' to securypto.conf
+- disable: add 'enablezeromint=0' to securypto.conf
 
 To change the percentage (no restart required):
 - menu Settings-&gt;Options-&gt;Percentage of autominted zSCU
@@ -2975,8 +2975,8 @@ Maximum allowed: </translation>
         <translation>No 'Pay To' address provided, creating local payment</translation>
     </message>
     <message>
-        <source>Invalid Pivx Address</source>
-        <translation>Invalid Pivx Address</translation>
+        <source>Invalid Securypto Address</source>
+        <translation>Invalid Securypto Address</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -4957,7 +4957,7 @@ Either mint higher denominations (so fewer inputs are needed) or reduce the amou
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>securypto-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</translation>

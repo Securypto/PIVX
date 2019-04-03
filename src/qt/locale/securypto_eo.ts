@@ -649,8 +649,8 @@
         <translation>Sendu mono al Securypto addreso</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
-        <translation>Peto pagojn (generas QR kodojn kaj pivx: URIs)</translation>
+        <source>Request payments (generates QR codes and securypto: URIs)</source>
+        <translation>Peto pagojn (generas QR kodojn kaj securypto: URIs)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -868,8 +868,8 @@ Muktisendi: %1</translation>
         <translation>Tekstetikedo</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (pivx.conf).</source>
-        <translation>Ĉiuj transakcio ne estos montri. Peor vidi ĉiuj transakcio bezonas agordi txindekso=1 en la agordo dosiero (pivx.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (securypto.conf).</source>
+        <translation>Ĉiuj transakcio ne estos montri. Peor vidi ĉiuj transakcio bezonas agordi txindekso=1 en la agordo dosiero (securypto.conf).</translation>
     </message>
 </context>
 <context>
@@ -1664,9 +1664,9 @@ Muktisendi: %1</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://www.transifex.com/securypto-project/securypto-project-translations</source>
         <translation>Ĉu mankas lingvon aŭ nekompleta tradukado? Helpu la  tradukcio ĉi tie:
-https://www.transifex.com/pivx-project/pivx-project-translations</translation>
+https://www.transifex.com/securypto-project/securypto-project-translations</translation>
     </message>
     <message>
         <source>Connect to the Securypto network through a SOCKS5 proxy.</source>
@@ -1957,8 +1957,8 @@ Nematura: konfirmita, sed malpli ol 1 minto el la samo nomado post ĝin estis mi
         <translation>Mesaĝo: eniri kvanto &gt; 0.</translation>
     </message>
     <message>
-        <source>Invalid Pivx Address</source>
-        <translation>Nevalida Pivx adreso</translation>
+        <source>Invalid Securypto Address</source>
+        <translation>Nevalida Securypto adreso</translation>
     </message>
     <message>
         <source>Confirm send coins</source>
@@ -2624,7 +2624,7 @@ Nematura: konfirmita, sed malpli ol 1 minto el la samo nomado post ĝin estis mi
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>securypto-core</name>
     <message>
         <source>Connect through SOCKS5 proxy</source>
         <translation>Konekti per SOCKS5 prokurilo</translation>

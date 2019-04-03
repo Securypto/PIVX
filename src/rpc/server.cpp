@@ -365,36 +365,36 @@ static const CRPCCommand vRPCCommands[] =
         { "hidden",             "waitforblockheight",     &waitforblockheight,     true,  true,  false  },
 
         /* Securypto features */
-        {"pivx", "masternode", &masternode, true, true, false},
-        {"pivx", "listmasternodes", &listmasternodes, true, true, false},
-        {"pivx", "getmasternodecount", &getmasternodecount, true, true, false},
-        {"pivx", "masternodeconnect", &masternodeconnect, true, true, false},
-        {"pivx", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
-        {"pivx", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
-        {"pivx", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
-        {"pivx", "masternodecurrent", &masternodecurrent, true, true, false},
-        {"pivx", "masternodedebug", &masternodedebug, true, true, false},
-        {"pivx", "startmasternode", &startmasternode, true, true, false},
-        {"pivx", "createmasternodekey", &createmasternodekey, true, true, false},
-        {"pivx", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
-        {"pivx", "listmasternodeconf", &listmasternodeconf, true, true, false},
-        {"pivx", "getmasternodestatus", &getmasternodestatus, true, true, false},
-        {"pivx", "getmasternodewinners", &getmasternodewinners, true, true, false},
-        {"pivx", "getmasternodescores", &getmasternodescores, true, true, false},
-        {"pivx", "mnbudget", &mnbudget, true, true, false},
-        {"pivx", "preparebudget", &preparebudget, true, true, false},
-        {"pivx", "submitbudget", &submitbudget, true, true, false},
-        {"pivx", "mnbudgetvote", &mnbudgetvote, true, true, false},
-        {"pivx", "getbudgetvotes", &getbudgetvotes, true, true, false},
-        {"pivx", "getnextsuperblock", &getnextsuperblock, true, true, false},
-        {"pivx", "getbudgetprojection", &getbudgetprojection, true, true, false},
-        {"pivx", "getbudgetinfo", &getbudgetinfo, true, true, false},
-        {"pivx", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
-        {"pivx", "mnfinalbudget", &mnfinalbudget, true, true, false},
-        {"pivx", "checkbudgets", &checkbudgets, true, true, false},
-        {"pivx", "mnsync", &mnsync, true, true, false},
-        {"pivx", "spork", &spork, true, true, false},
-        {"pivx", "getpoolinfo", &getpoolinfo, true, true, false},
+        {"securypto", "masternode", &masternode, true, true, false},
+        {"securypto", "listmasternodes", &listmasternodes, true, true, false},
+        {"securypto", "getmasternodecount", &getmasternodecount, true, true, false},
+        {"securypto", "masternodeconnect", &masternodeconnect, true, true, false},
+        {"securypto", "createmasternodebroadcast", &createmasternodebroadcast, true, true, false},
+        {"securypto", "decodemasternodebroadcast", &decodemasternodebroadcast, true, true, false},
+        {"securypto", "relaymasternodebroadcast", &relaymasternodebroadcast, true, true, false},
+        {"securypto", "masternodecurrent", &masternodecurrent, true, true, false},
+        {"securypto", "masternodedebug", &masternodedebug, true, true, false},
+        {"securypto", "startmasternode", &startmasternode, true, true, false},
+        {"securypto", "createmasternodekey", &createmasternodekey, true, true, false},
+        {"securypto", "getmasternodeoutputs", &getmasternodeoutputs, true, true, false},
+        {"securypto", "listmasternodeconf", &listmasternodeconf, true, true, false},
+        {"securypto", "getmasternodestatus", &getmasternodestatus, true, true, false},
+        {"securypto", "getmasternodewinners", &getmasternodewinners, true, true, false},
+        {"securypto", "getmasternodescores", &getmasternodescores, true, true, false},
+        {"securypto", "mnbudget", &mnbudget, true, true, false},
+        {"securypto", "preparebudget", &preparebudget, true, true, false},
+        {"securypto", "submitbudget", &submitbudget, true, true, false},
+        {"securypto", "mnbudgetvote", &mnbudgetvote, true, true, false},
+        {"securypto", "getbudgetvotes", &getbudgetvotes, true, true, false},
+        {"securypto", "getnextsuperblock", &getnextsuperblock, true, true, false},
+        {"securypto", "getbudgetprojection", &getbudgetprojection, true, true, false},
+        {"securypto", "getbudgetinfo", &getbudgetinfo, true, true, false},
+        {"securypto", "mnbudgetrawvote", &mnbudgetrawvote, true, true, false},
+        {"securypto", "mnfinalbudget", &mnfinalbudget, true, true, false},
+        {"securypto", "checkbudgets", &checkbudgets, true, true, false},
+        {"securypto", "mnsync", &mnsync, true, true, false},
+        {"securypto", "spork", &spork, true, true, false},
+        {"securypto", "getpoolinfo", &getpoolinfo, true, true, false},
 
 #ifdef ENABLE_WALLET
         /* Wallet */
@@ -633,7 +633,7 @@ std::vector<std::string> CRPCTable::listCommands() const
 
 std::string HelpExampleCli(string methodname, string args)
 {
-    return "> pivx-cli " + methodname + " " + args + "\n";
+    return "> securypto-cli " + methodname + " " + args + "\n";
 }
 
 std::string HelpExampleRpc(string methodname, string args)

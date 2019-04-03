@@ -657,8 +657,8 @@
         <translation>Skicka mynt till en Securypto adress</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
-        <translation>Begär betalning (genererar QR kod och pivx: URls)</translation>
+        <source>Request payments (generates QR codes and securypto: URIs)</source>
+        <translation>Begär betalning (genererar QR kod och securypto: URls)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -896,8 +896,8 @@ MultiSend: %1</translation>
         <translation>text etikett</translation>
     </message>
     <message>
-        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (pivx.conf).</source>
-        <translation>Alla transaktioner kommer inte visas. För att visa alla transaktioner behöver du sätta txindex=1 i konfigurationsfilen (pivx.conf).</translation>
+        <source>Not all transactions will be shown. To view all transactions you need to set txindex=1 in the configuration file (securypto.conf).</source>
+        <translation>Alla transaktioner kommer inte visas. För att visa alla transaktioner behöver du sätta txindex=1 i konfigurationsfilen (securypto.conf).</translation>
     </message>
 </context>
 <context>
@@ -1984,9 +1984,9 @@ Var god vänta efter att du trycker på importera.</translation>
     </message>
     <message>
         <source>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/pivx-project/pivx-project-translations</source>
+https://www.transifex.com/securypto-project/securypto-project-translations</source>
         <translation>Fattas språk eller är översättningen ofullständig? Hjälp till att bidra med översättning här:
-https://www.transifex.com/pivx-project/pivx-project-translations</translation>
+https://www.transifex.com/securypto-project/securypto-project-translations</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -2308,14 +2308,14 @@ Om AutoMint är tillåten så kommer denna procent att vara som den konfigurerad
         <translation>AutoMint är för tillfället aktiverat och inställt på</translation>
     </message>
     <message>
-        <source>To disable AutoMint add 'enablezeromint=0' in pivx.conf.</source>
-        <translation>För att inaktivera AutoMint, lägg till 'enablezeromint=0' i pivx.conf.</translation>
+        <source>To disable AutoMint add 'enablezeromint=0' in securypto.conf.</source>
+        <translation>För att inaktivera AutoMint, lägg till 'enablezeromint=0' i securypto.conf.</translation>
     </message>
     <message>
         <source>AutoMint is currently disabled.
-To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in pivx.conf</source>
+To enable AutoMint change 'enablezeromint=0' to 'enablezeromint=1' in securypto.conf</source>
         <translation>AutoMint är för närvarande inaktiverat.
-För att aktivera AutoMint ändra 'enablezeromint=0' till 'enablezeromint=1' i pivx.conf</translation>
+För att aktivera AutoMint ändra 'enablezeromint=0' till 'enablezeromint=1' i securypto.conf</translation>
     </message>
 </context>
 <context>
@@ -2341,8 +2341,8 @@ För att aktivera AutoMint ändra 'enablezeromint=0' till 'enablezeromint=1' i p
         <translation>Ogiltig betalningsadress %1</translation>
     </message>
     <message>
-        <source>Cannot start pivx: click-to-pay handler</source>
-        <translation>Kan ej starta pivx: klicka-för-att-betala hanterare</translation>
+        <source>Cannot start securypto: click-to-pay handler</source>
+        <translation>Kan ej starta securypto: klicka-för-att-betala hanterare</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Securypto address or malformed URI parameters.</source>
@@ -2620,8 +2620,8 @@ Omogna: bekräftade men under 1 myntning av samma valör efter den blev präglad
         <source>Show the current status of automatic zSCU minting.
 
 To change the status (restart required):
-- enable: add 'enablezeromint=1' to pivx.conf
-- disable: add 'enablezeromint=0' to pivx.conf
+- enable: add 'enablezeromint=1' to securypto.conf
+- disable: add 'enablezeromint=0' to securypto.conf
 
 To change the percentage (no restart required):
 - menu Settings-&gt;Options-&gt;Percentage of autominted zSCU
@@ -2630,8 +2630,8 @@ To change the percentage (no restart required):
         <translation>Visa den nuvarande statusen av automatisk zSCU minting.
 
 För att ändra statusen (omstart krävs):
--aktivera: lägg till 'enablezeromint=1' i pivx.conf
--inaktivera: lägg till 'enablezeromint=0' i pivx.conf
+-aktivera: lägg till 'enablezeromint=1' i securypto.conf
+-inaktivera: lägg till 'enablezeromint=0' i securypto.conf
 
 För att ändra procenten (ingen omstart krävs):
 -meny Inställningar-&gt;Alternativ-&gt;Procent på autominted zSCU
@@ -2975,8 +2975,8 @@ Högsta tillåtna:</translation>
         <translation>Ingen 'Betala Till' adress inmatad, skapar lokal betalning</translation>
     </message>
     <message>
-        <source>Invalid Pivx Address</source>
-        <translation>Ogiltig Pivx Adress</translation>
+        <source>Invalid Securypto Address</source>
+        <translation>Ogiltig Securypto Adress</translation>
     </message>
     <message>
         <source>Invalid Send Amount</source>
@@ -4953,7 +4953,7 @@ Minta antingen högre valörer (så att färre inputs behövs) eller spendera mi
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>securypto-core</name>
     <message>
         <source>(1 = keep tx meta data e.g. account owner and payment request information, 2 = drop tx meta data)</source>
         <translation>(1 = behåll tx meta data t.ex. kontoägare och information om betalningsförfråga, 2 = släpp tx meta data)</translation>

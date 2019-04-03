@@ -41,11 +41,11 @@ QString BitcoinUnits::id(int unit)
 {
     switch (unit) {
     case SCU:
-        return QString("pivx");
+        return QString("securypto");
     case mSCU:
-        return QString("mpivx");
+        return QString("msecurypto");
     case uSCU:
-        return QString::fromUtf8("upivx");
+        return QString::fromUtf8("usecurypto");
     default:
         return QString("???");
     }

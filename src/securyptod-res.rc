@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Securypto"
-            VALUE "FileDescription",    "pivxd (OSS daemon/client for Securypto)"
+            VALUE "FileDescription",    "securyptod (OSS daemon/client for Securypto)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "pivxd"
+            VALUE "InternalName",       "securyptod"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "pivxd.exe"
-            VALUE "ProductName",        "pivxd"
+            VALUE "OriginalFilename",   "securyptod.exe"
+            VALUE "ProductName",        "securyptod"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

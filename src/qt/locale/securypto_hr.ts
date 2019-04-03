@@ -625,8 +625,8 @@
         <translation>Pošaljite kovanice na Securypto adresu</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and pivx: URIs)</source>
-        <translation>Zahtjev za plaćanja (generira QR kodove i pivx: URI)</translation>
+        <source>Request payments (generates QR codes and securypto: URIs)</source>
+        <translation>Zahtjev za plaćanja (generira QR kodove i securypto: URI)</translation>
     </message>
     <message>
         <source>&amp;Privacy</source>
@@ -1586,7 +1586,7 @@
     </message>
     </context>
 <context>
-    <name>pivx-core</name>
+    <name>securypto-core</name>
     <message>
         <source>Error</source>
         <translation>Greška</translation>
