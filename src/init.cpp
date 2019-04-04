@@ -1163,7 +1163,22 @@ bool AppInit2()
             }
         }
 
-        if (GetBoolArg("-resync", false)) {
+	// Chain version checking, do resync if not latest.
+	bool newChain = false;
+	filesystem::path checkExist = GetDataDir() / "blocks";
+ 	filesystem::path chainFile = GetDataDir() / "chainversion2";
+	if(filesystem::exists(checkExist)){
+		if (!filesystem::exists(chainFile)){
+			newChain = true;
+		}
+	}
+	if (!filesystem::exists(chainFile)){
+		boost::filesystem::ofstream os(chainFile);
+		os << "";
+	}
+
+
+        if (GetBoolArg("-resync", false) || newChain) {
             uiInterface.InitMessage(_("Preparing for resync..."));
             // Delete the local blockchain folders to force a resync from scratch to get a consitent blockchain-state
             filesystem::path blocksDir = GetDataDir() / "blocks";
@@ -1197,6 +1212,10 @@ bool AppInit2()
                 LogPrintf("Failed to delete blockchain folders %s\n", error.what());
             }
         }
+
+	if(newChain){
+		return InitError("New chain has been detected and will replace the old version. Please use Start_Wallet to reopen your wallet again.");
+	}
 
         LogPrintf("Using wallet %s\n", strWalletFile);
         uiInterface.InitMessage(_("Verifying wallet..."));
