@@ -1,5 +1,5 @@
 ---
-name: "securypto-linux-3.2"
+name: "securypto-linux-1.0"
 enable_cache: true
 suites:
 - "bionic"
@@ -32,7 +32,7 @@ packages:
 - "ca-certificates"
 - "python"
 remotes:
-- "url": "https://github.com/securypto-project/securypto.git"
+- "url": "https://github.com/securypto/securypto.git"
   "dir": "securypto"
 files: []
 script: |

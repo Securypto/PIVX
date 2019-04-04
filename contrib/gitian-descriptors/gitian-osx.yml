@@ -1,5 +1,5 @@
 ---
-name: "securypto-osx-3.2"
+name: "securypto-osx-1.0"
 enable_cache: true
 suites:
 - "bionic"
@@ -28,7 +28,7 @@ packages:
 - "python-setuptools"
 - "fonts-tuffy"
 remotes:
-- "url": "https://github.com/securypto-project/securypto.git"
+- "url": "https://github.com/securypto/securypto.git"
   "dir": "securypto"
 files:
 - "MacOSX10.11.sdk.tar.gz"
