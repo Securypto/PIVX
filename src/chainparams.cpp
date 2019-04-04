@@ -122,7 +122,7 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Securypto: 1 day
         nTargetSpacing = 1 * 60;  // Securypto: 1 minute
-        nMaturity = 100;
+        nMaturity = 50;
         nMasternodeCountDrift = 20;
         nMaxMoneyOut = 21000000 * COIN;
 
@@ -143,7 +143,7 @@ public:
         nRejectOldSporkKey = 1527811200; //!> Fully reject old spork key after (GMT): Friday, June 1, 2018 12:00:00 AM
 
         // Fake Serial Attack
-        nFakeSerialBlockheightEnd = 1;
+        nFakeSerialBlockheightEnd = -1;
         nSupplyBeforeFakeSerial = 0;
 
 

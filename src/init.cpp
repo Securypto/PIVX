@@ -1526,6 +1526,7 @@ bool AppInit2()
                 bool reindexDueWrappedSerials = false;
                 bool reindexZerocoin = false;
                 int chainHeight = chainActive.Height();
+/*
                 if(Params().NetworkID() == CBaseChainParams::MAIN && chainHeight > Params().Zerocoin_Block_EndFakeSerial()) {
 
                     // Supply needs to be exactly GetSupplyBeforeFakeSerial + GetWrapppedSerialInflationAmount
@@ -1543,7 +1544,7 @@ bool AppInit2()
                     }
 
                 }
-
+*/
                 // Reindex only for wrapped serials inflation.
                 if (reindexDueWrappedSerials)
                     AddWrappedSerialsInflation();
@@ -1557,7 +1558,7 @@ bool AppInit2()
                     // Recalculate from the zerocoin activation or from scratch.
                     RecalculateSCUSupply(reindexZerocoin ? Params().Zerocoin_StartHeight() : 1);
                 }
-
+/*
                 // Check Recalculation result
                 if(Params().NetworkID() == CBaseChainParams::MAIN && chainHeight > Params().Zerocoin_Block_EndFakeSerial()) {
                     CBlockIndex* pblockindex = chainActive[Params().Zerocoin_Block_EndFakeSerial() + 1];
@@ -1565,7 +1566,7 @@ bool AppInit2()
                     if (pblockindex->GetZerocoinSupply() != zpivSupplyCheckpoint)
                         return InitError(strprintf("ZerocoinSupply Recalculation failed: %d vs %d", pblockindex->GetZerocoinSupply()/COIN , zpivSupplyCheckpoint/COIN));
                 }
-
+*/
                 // Force recalculation of accumulators.
                 if (GetBoolArg("-reindexaccumulators", false)) {
                     if (chainHeight > Params().Zerocoin_Block_V2_Start()) {

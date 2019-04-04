@@ -1908,9 +1908,9 @@ int64_t GetBlockValue(int nHeight)
     if (nHeight == 0) {
         nSubsidy = 20000000 * COIN; // 32mil premine
     } else if(nHeight == 1){
-        nSubsidy = 12000000 * COIN;
+        nSubsidy = (12000000-19800) * COIN;
     } else if (nHeight <= Params().LAST_POW_BLOCK() && nHeight > 1) {
-        nSubsidy = 1 * COIN;
+        nSubsidy = 100 * COIN;
     } else if (nHeight <= 129600 && nHeight > Params().LAST_POW_BLOCK()) {
         nSubsidy = 100 * COIN;
     } else {
@@ -2162,8 +2162,9 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
         if (nHeight < 200)
             return 0;
     }
-
-    if (nHeight <= 129600) { // Masternodes 60% - Stakers 40%
+    if(nHeight <= Params().LAST_POW_BLOCK()){
+        ret = blockValue / 2;
+    }else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 129600) { // Masternodes 60% - Stakers 40%
         ret = 60 * COIN;
     } else {
 	ret = 36 * COIN;
