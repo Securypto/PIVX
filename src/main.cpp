@@ -1048,6 +1048,9 @@ bool CheckZerocoinSpend(const CTransaction& tx, bool fVerifySignature, CValidati
     if (tx.vout.size() > 2) {
         int outs = 0;
         for (const CTxOut& out : tx.vout) {
+          if(out.scriptPubKey.size() >0)
+                if(out.scriptPubKey.at(0) == OP_RETURN)
+                    continue;
             if (out.IsZerocoinMint())
                 continue;
             outs++;

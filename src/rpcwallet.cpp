@@ -2841,9 +2841,9 @@ UniValue mintzerocoin(const UniValue& params, bool fHelp)
 
 UniValue spendzerocoin(const UniValue& params, bool fHelp)
 {
-    if (fHelp || params.size() > 4 || params.size() < 3)
+    if (fHelp || params.size() > 5 || params.size() < 3)
         throw runtime_error(
-            "spendzerocoin amount mintchange minimizechange ( \"address\" )\n"
+            "spendzerocoin amount mintchange minimizechange ( \"address\" ) comment\n"
             "\nSpend zSCU to a SCU address.\n" +
             HelpRequiringPassphrase() + "\n"
 
@@ -2853,7 +2853,7 @@ UniValue spendzerocoin(const UniValue& params, bool fHelp)
             "3. minimizechange  (boolean, required) Try to minimize the returning change  [false]\n"
             "4. \"address\"     (string, optional, default=change) Send to specified address or to a new change address.\n"
             "                       If there is change then an address is required\n"
-
+	    "5.comment          (string, optional)\n"
             "\nResult:\n"
             "{\n"
             "  \"txid\": \"xxx\",             (string) Transaction hash.\n"
@@ -2892,10 +2892,10 @@ UniValue spendzerocoin(const UniValue& params, bool fHelp)
     bool fMintChange = params[1].get_bool();        // Mint change to zSCU
     bool fMinimizeChange = params[2].get_bool();    // Minimize change
     std::string address_str = params.size() > 3 ? params[3].get_str() : "";
-
+    std::string comment = params.size() > 4 ? params[4].get_str() : "";
     vector<CZerocoinMint> vMintsSelected;
 
-    return DoZpivSpend(nAmount, fMintChange, fMinimizeChange, vMintsSelected, address_str);
+    return DoZpivSpend(nAmount, fMintChange, fMinimizeChange, vMintsSelected, address_str,comment);
 }
 
 
@@ -2993,13 +2993,18 @@ UniValue spendzerocoinmints(const UniValue& params, bool fHelp)
 }
 
 
-extern UniValue DoZpivSpend(const CAmount nAmount, bool fMintChange, bool fMinimizeChange, vector<CZerocoinMint>& vMintsSelected, std::string address_str)
+extern UniValue DoZpivSpend(const CAmount nAmount, bool fMintChange, bool fMinimizeChange, vector<CZerocoinMint>& vMintsSelected, std::string address_str, std::string comment)
 {
     int64_t nTimeStart = GetTimeMillis();
     CBitcoinAddress address = CBitcoinAddress(); // Optional sending address. Dummy initialization here.
     CWalletTx wtx;
     CZerocoinSpendReceipt receipt;
     bool fSuccess;
+
+
+    if (comment != "") {
+        wtx.mapValue["comment"] = comment;
+    }
 
     if(address_str != "") { // Spend to supplied destination address
         address = CBitcoinAddress(address_str);
