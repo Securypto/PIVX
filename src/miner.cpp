@@ -443,6 +443,7 @@ CBlockTemplate* CreateNewBlock(const CScript& scriptPubKeyIn, CWallet* pwallet, 
             //Make payee
             if (txNew.vout.size() > 1) {
                 pblock->payee = txNew.vout[1].scriptPubKey;
+                txNew.vin[0].scriptSig = CScript() << nHeight << OP_0; // fix coinbase script
             } else {
                 CAmount blockValue = nFees + GetBlockValue(pindexPrev->nHeight);
                 txNew.vout[0].nValue = blockValue;
