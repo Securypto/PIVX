@@ -653,6 +653,41 @@ struct CImportingNow {
     }
 };
 
+void deleteChain(){
+            // Delete the local blockchain folders to force a resync from scratch to get a consitent blockchain-state
+            filesystem::path blocksDir = GetDataDir() / "blocks";
+            filesystem::path chainstateDir = GetDataDir() / "chainstate";
+            filesystem::path sporksDir = GetDataDir() / "sporks";
+            filesystem::path zerocoinDir = GetDataDir() / "zerocoin";
+
+            LogPrintf("Deleting blockchain folders blocks, chainstate, sporks and zerocoin\n");
+            // We delete in 4 individual steps in case one of the folder is missing already
+            try {
+                if (filesystem::exists(blocksDir)){
+                    boost::filesystem::remove_all(blocksDir);
+                    LogPrintf("-resync: folder deleted: %s\n", blocksDir.string().c_str());
+                }
+
+                if (filesystem::exists(chainstateDir)){
+                    boost::filesystem::remove_all(chainstateDir);
+                    LogPrintf("-resync: folder deleted: %s\n", chainstateDir.string().c_str());
+                }
+
+                if (filesystem::exists(sporksDir)){
+                    boost::filesystem::remove_all(sporksDir);
+                    LogPrintf("-resync: folder deleted: %s\n", sporksDir.string().c_str());
+                }
+
+                if (filesystem::exists(zerocoinDir)){
+                    boost::filesystem::remove_all(zerocoinDir);
+                    LogPrintf("-resync: folder deleted: %s\n", zerocoinDir.string().c_str());
+                }
+            } catch (boost::filesystem::filesystem_error& error) {
+                LogPrintf("Failed to delete blockchain folders %s\n", error.what());
+            }
+
+}
+
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
     RenameThread("securypto-loadblk");
@@ -751,6 +786,53 @@ bool AppInitServers()
  */
 bool AppInit2()
 {
+
+
+
+	// Chain version checking, do resync if not latest.
+	bool newChain = false;
+	filesystem::path checkExist = GetDataDir() / "blocks";
+ 	filesystem::path chainFile = GetDataDir() / "chainversion2";
+	if(filesystem::exists(checkExist)){
+		if (!filesystem::exists(chainFile)){
+			filesystem::path peerFile = GetDataDir() / "peers.dat";
+			if (filesystem::exists(peerFile))
+				filesystem::remove(peerFile);
+			filesystem::path budgetFile = GetDataDir() / "budget.dat";
+			if (filesystem::exists(budgetFile))
+				filesystem::remove(budgetFile);
+			filesystem::path feeFile = GetDataDir() / "fee_estimates.dat";
+			if (filesystem::exists(feeFile))
+				filesystem::remove(feeFile);
+			filesystem::path cacheFile = GetDataDir() / "mncache.dat";
+			if (filesystem::exists(cacheFile))
+				filesystem::remove(cacheFile);
+			filesystem::path paymentFile = GetDataDir() / "mnpayments.dat";
+			if (filesystem::exists(paymentFile))
+				filesystem::remove(paymentFile);
+			filesystem::path precomFile = GetDataDir() / "precomputes.dat";
+			if (filesystem::exists(precomFile))
+				filesystem::remove(precomFile);
+			filesystem::path banlistFile = GetDataDir() / "banlist.dat";
+			if (filesystem::exists(banlistFile))
+				filesystem::remove(banlistFile);
+
+			newChain = true;
+		}
+	}
+	if (!filesystem::exists(chainFile)){
+		boost::filesystem::ofstream os(chainFile);
+		os << "";
+		os.close();
+	}
+
+	if(newChain){
+
+            uiInterface.InitMessage(_("Preparing for wallet reset..."));
+	    deleteChain();
+	}
+
+
 // ********************************************************* Step 1: setup
 #ifdef _MSC_VER
     // Turn off Microsoft heap dump noise
@@ -1163,22 +1245,11 @@ bool AppInit2()
             }
         }
 
-	// Chain version checking, do resync if not latest.
-	bool newChain = false;
-	filesystem::path checkExist = GetDataDir() / "blocks";
- 	filesystem::path chainFile = GetDataDir() / "chainversion2";
-	if(filesystem::exists(checkExist)){
-		if (!filesystem::exists(chainFile)){
-			newChain = true;
-		}
-	}
-	if (!filesystem::exists(chainFile)){
-		boost::filesystem::ofstream os(chainFile);
-		os << "";
-	}
 
 
-        if (GetBoolArg("-resync", false) || newChain) {
+
+
+        if (GetBoolArg("-resync", false)) {
             uiInterface.InitMessage(_("Preparing for resync..."));
             // Delete the local blockchain folders to force a resync from scratch to get a consitent blockchain-state
             filesystem::path blocksDir = GetDataDir() / "blocks";
@@ -1212,10 +1283,6 @@ bool AppInit2()
                 LogPrintf("Failed to delete blockchain folders %s\n", error.what());
             }
         }
-
-	if(newChain){
-		return InitError("New chain has been detected and will replace the old version. Please use Start_Wallet to reopen your wallet again.");
-	}
 
         LogPrintf("Using wallet %s\n", strWalletFile);
         uiInterface.InitMessage(_("Verifying wallet..."));
@@ -1670,7 +1737,7 @@ bool AppInit2()
         // needed to restore wallet transaction meta data after -zapwallettxes
         std::vector<CWalletTx> vWtx;
 
-        if (GetBoolArg("-zapwallettxes", false)) {
+        if (GetBoolArg("-zapwallettxes", false) || newChain) {
             uiInterface.InitMessage(_("Zapping all transactions from wallet..."));
 
             pwalletMain = new CWallet(strWalletFile);
@@ -1797,6 +1864,15 @@ bool AppInit2()
         pwalletMain->zpivTracker->Init();
         zwalletMain->LoadMintPoolFromDB();
         zwalletMain->SyncWithChain();
+
+
+	if(newChain){
+		pwalletMain->ResetMintZerocoin();
+		pwalletMain->ResetSpentZerocoin();
+		deleteChain();
+		return InitError("Wallet has been successfully reset. Please use Start_Wallet to reopen your wallet again.");
+	}
+
     }  // (!fDisableWallet)
 #else  // ENABLE_WALLET
     LogPrintf("No wallet compiled in!\n");
