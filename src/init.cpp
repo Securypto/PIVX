@@ -1869,8 +1869,11 @@ bool AppInit2()
 	if(newChain){
 		pwalletMain->ResetMintZerocoin();
 		pwalletMain->ResetSpentZerocoin();
+		InitError("Wallet has been successfully reset. Please use Start_Wallet to reopen your wallet again.");
+		Interrupt();
+		Shutdown();
 		deleteChain();
-		return InitError("Wallet has been successfully reset. Please use Start_Wallet to reopen your wallet again.");
+		exit(0);
 	}
 
     }  // (!fDisableWallet)
