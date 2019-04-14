@@ -269,11 +269,10 @@ bool CalculateAccumulatorCheckpoint(int nHeight, uint256& nCheckpoint, Accumulat
     CBlockIndex *pindex = chainActive[nHeightCheckpoint - 20];
 
     while (pindex->nHeight < nHeight - 10) {
-	/*
         // checking whether we should stop this process due to a shutdown request
         if (ShutdownRequested())
             return false;
-	*/
+
         //make sure this block is eligible for accumulation
         if (pindex->nHeight < Params().Zerocoin_StartHeight()) {
             pindex = chainActive[pindex->nHeight + 1];
