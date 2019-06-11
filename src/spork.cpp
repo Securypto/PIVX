@@ -25,6 +25,29 @@ CSporkManager sporkManager;
 std::map<uint256, CSporkMessage> mapSporks;
 std::map<int, CSporkMessage> mapSporksActive;
 
+
+std::vector<std::string> string_split(std::string s, const char delimiter)
+{
+    size_t start=0;
+    size_t end=s.find_first_of(delimiter);
+    
+    std::vector<std::string> output;
+    
+    while (end <= std::string::npos)
+    {
+        output.emplace_back(s.substr(start, end-start));
+
+        if (end == std::string::npos)
+            break;
+
+        start=end+1;
+        end = s.find_first_of(delimiter, start);
+    }
+    
+    return output;
+}
+
+
 // Securypto: on startup load spork values from previous session if they exist in the sporkDB
 void LoadSporksFromDB()
 {
@@ -142,6 +165,15 @@ int64_t GetSporkValue(int nSporkID)
     return r;
 }
 
+std::string GetSporkStrValue(int nSporkID)
+{
+    std::string r = "";
+    if (mapSporksActive.count(nSporkID)) {
+        r = mapSporksActive[nSporkID].strValue;
+    }
+    return r;
+}
+
 // grab the spork value, and see if it's off
 bool IsSporkActive(int nSporkID)
 {
@@ -185,7 +217,7 @@ void ReprocessBlocks(int nBlocks)
 bool CSporkManager::CheckSignature(CSporkMessage& spork, bool fCheckSigner)
 {
     //note: need to investigate why this is failing
-    std::string strMessage = std::to_string(spork.nSporkID) + std::to_string(spork.nValue) + std::to_string(spork.nTimeSigned);
+    std::string strMessage = std::to_string(spork.nSporkID) + std::to_string(spork.nValue) + spork.strValue + std::to_string(spork.nTimeSigned);
     CPubKey pubkeynew(ParseHex(Params().SporkKey()));
     std::string errorMessage = "";
 
@@ -205,7 +237,7 @@ bool CSporkManager::CheckSignature(CSporkMessage& spork, bool fCheckSigner)
 
 bool CSporkManager::Sign(CSporkMessage& spork)
 {
-    std::string strMessage = std::to_string(spork.nSporkID) + std::to_string(spork.nValue) + std::to_string(spork.nTimeSigned);
+    std::string strMessage = std::to_string(spork.nSporkID) + std::to_string(spork.nValue) + spork.strValue + std::to_string(spork.nTimeSigned);
 
     CKey key2;
     CPubKey pubkey2;
@@ -229,12 +261,42 @@ bool CSporkManager::Sign(CSporkMessage& spork)
     return true;
 }
 
-bool CSporkManager::UpdateSpork(int nSporkID, int64_t nValue)
+bool CSporkManager::UpdateSpork(int nSporkID, int64_t nValue, std::string strValue)
 {
+ 
+    if(nSporkID == SPORK_17_BLOCK_VALUE) {
+        int startBlockHeight = 0;
+        std::vector<std::string> newValue = string_split(strValue, ':');
+        if(newValue.size() == 2){
+            startBlockHeight = stoi(newValue[0]);
+        }else{
+            return false;
+        }
+        std::vector<std::string> c = string_split(GetSporkStrValue(SPORK_17_BLOCK_VALUE), ',');
+        if(!c.empty()){
+            std::vector<std::string> lastValue = string_split(c[c.size()-1], ':');
+            if(lastValue.size() == 2){                
+                if(stoi(lastValue[0]) >= startBlockHeight){
+                    return false;
+                }
+            }
+        }
+
+        if(startBlockHeight < chainActive.Height() + 10) {
+            return false;
+        }
+        
+        strValue = GetSporkStrValue(SPORK_17_BLOCK_VALUE) +","+ strValue;
+    }
+
     CSporkMessage msg;
     msg.nSporkID = nSporkID;
     msg.nValue = nValue;
+    msg.strValue = strValue;
     msg.nTimeSigned = GetTime();
+
+
+
 
     if (Sign(msg)) {
         Relay(msg);
@@ -282,6 +344,7 @@ int CSporkManager::GetSporkIDByName(std::string strName)
     if (strName == "SPORK_14_NEW_PROTOCOL_ENFORCEMENT") return SPORK_14_NEW_PROTOCOL_ENFORCEMENT;
     if (strName == "SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2") return SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2;
     if (strName == "SPORK_16_ZEROCOIN_MAINTENANCE_MODE") return SPORK_16_ZEROCOIN_MAINTENANCE_MODE;
+    if (strName == "SPORK_17_BLOCK_VALUE") return SPORK_17_BLOCK_VALUE;
 
     return -1;
 }
@@ -299,6 +362,7 @@ std::string CSporkManager::GetSporkNameByID(int id)
     if (id == SPORK_14_NEW_PROTOCOL_ENFORCEMENT) return "SPORK_14_NEW_PROTOCOL_ENFORCEMENT";
     if (id == SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) return "SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2";
     if (id == SPORK_16_ZEROCOIN_MAINTENANCE_MODE) return "SPORK_16_ZEROCOIN_MAINTENANCE_MODE";
+    if (id == SPORK_17_BLOCK_VALUE) return "SPORK_17_BLOCK_VALUE";
 
     return "Unknown";
 }

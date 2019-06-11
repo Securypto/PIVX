@@ -296,7 +296,7 @@ UniValue spork(const UniValue& params, bool fHelp)
         UniValue ret(UniValue::VOBJ);
         for (int nSporkID = SPORK_START; nSporkID <= SPORK_END; nSporkID++) {
             if (sporkManager.GetSporkNameByID(nSporkID) != "Unknown")
-                ret.push_back(Pair(sporkManager.GetSporkNameByID(nSporkID), GetSporkValue(nSporkID)));
+                ret.push_back(Pair(sporkManager.GetSporkNameByID(nSporkID), std::to_string(GetSporkValue(nSporkID))+" , "+GetSporkStrValue(nSporkID)));
         }
         return ret;
     } else if (params.size() == 1 && params[0].get_str() == "active") {
@@ -306,7 +306,7 @@ UniValue spork(const UniValue& params, bool fHelp)
                 ret.push_back(Pair(sporkManager.GetSporkNameByID(nSporkID), IsSporkActive(nSporkID)));
         }
         return ret;
-    } else if (params.size() == 2) {
+    } else if (params.size() >= 2) {
         int nSporkID = sporkManager.GetSporkIDByName(params[0].get_str());
         if (nSporkID == -1) {
             return "Invalid spork name";
@@ -314,9 +314,13 @@ UniValue spork(const UniValue& params, bool fHelp)
 
         // SPORK VALUE
         int64_t nValue = params[1].get_int64();
+        std::string strValue = "";
+
+        if(params.size() > 2)
+            strValue = params[2].get_str();
 
         //broadcast new spork
-        if (sporkManager.UpdateSpork(nSporkID, nValue)) {
+        if (sporkManager.UpdateSpork(nSporkID, nValue, strValue)) {
             return "success";
         } else {
             return "failure";

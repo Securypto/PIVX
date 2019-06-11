@@ -26,7 +26,7 @@ using namespace boost;
     Sporks 11,12, and 16 to be removed with 1st zerocoin release
 */
 #define SPORK_START 10001
-#define SPORK_END 10015
+#define SPORK_END 10016
 
 #define SPORK_2_SWIFTTX 10001
 #define SPORK_3_SWIFTTX_BLOCK_FILTERING 10002
@@ -41,6 +41,7 @@ using namespace boost;
 #define SPORK_14_NEW_PROTOCOL_ENFORCEMENT 10013
 #define SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2 10014
 #define SPORK_16_ZEROCOIN_MAINTENANCE_MODE 10015
+#define SPORK_17_BLOCK_VALUE 10016
 
 #define SPORK_2_SWIFTTX_DEFAULT 978307200                         //2001-1-1
 #define SPORK_3_SWIFTTX_BLOCK_FILTERING_DEFAULT 1424217600        //2015-2-18
@@ -65,6 +66,7 @@ extern CSporkManager sporkManager;
 void LoadSporksFromDB();
 void ProcessSpork(CNode* pfrom, std::string& strCommand, CDataStream& vRecv);
 int64_t GetSporkValue(int nSporkID);
+std::string GetSporkStrValue(int nSporkID);
 bool IsSporkActive(int nSporkID);
 void ReprocessBlocks(int nBlocks);
 
@@ -79,6 +81,7 @@ public:
     std::vector<unsigned char> vchSig;
     int nSporkID;
     int64_t nValue;
+    std::string strValue;
     int64_t nTimeSigned;
 
     uint256 GetHash()
@@ -94,6 +97,7 @@ public:
     {
         READWRITE(nSporkID);
         READWRITE(nValue);
+        READWRITE(strValue);        
         READWRITE(nTimeSigned);
         READWRITE(vchSig);
     }
@@ -113,7 +117,7 @@ public:
 
     std::string GetSporkNameByID(int id);
     int GetSporkIDByName(std::string strName);
-    bool UpdateSpork(int nSporkID, int64_t nValue);
+    bool UpdateSpork(int nSporkID, int64_t nValue,std::string strValue);
     bool SetPrivKey(std::string strPrivKey);
     bool CheckSignature(CSporkMessage& spork, bool fCheckSigner = false);
     bool Sign(CSporkMessage& spork);

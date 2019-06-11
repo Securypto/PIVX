@@ -253,20 +253,20 @@ public:
         nMinerThreads = 0;
         nTargetTimespan = 1 * 60; // Securypto: 1 day
         nTargetSpacing = 1 * 60;  // Securypto: 1 minute
-        nLastPOWBlock = 200;
-        nMaturity = 15;
+        nLastPOWBlock = 140;
+        nMaturity = 10;
         nMasternodeCountDrift = 4;
         nModifierUpdateBlock = 51197; //approx Mon, 17 Apr 2017 04:00:00 GMT
         nMaxMoneyOut = 43199500 * COIN;
-        nZerocoinStartHeight = 201576;
-        nZerocoinStartTime = 1501776000;
+        nZerocoinStartHeight = 1;
+        nZerocoinStartTime = 1554301480;         
         nBlockEnforceSerialRange = 1; //Enforce serial range starting this block
         nBlockRecalculateAccumulators = 9908000; //Trigger a recalculation of accumulators
         nBlockFirstFraudulent = 9891737; //First block that bad serials emerged
         nBlockLastGoodCheckpoint = 9891730; //Last valid accumulator checkpoint
         nBlockEnforceInvalidUTXO = 9902850; //Start enforcing the invalid UTXO's
         nInvalidAmountFiltered = 0; //Amount of invalid coins filtered through exchanges, that should be considered valid
-        nBlockZerocoinV2 = 444020; //!> The block that zerocoin v2 becomes active
+        nBlockZerocoinV2 = 4440200; //!> The block that zerocoin v2 becomes active
         nEnforceNewSporkKey = 1521604800; //!> Sporks signed after Wednesday, March 21, 2018 4:00:00 AM GMT must use the new spork key
         nRejectOldSporkKey = 1522454400; //!> Reject old spork key after Saturday, March 31, 2018 12:00:00 AM GMT
 
@@ -307,8 +307,8 @@ public:
 
         nPoolMaxTransactions = 2;
         nBudgetCycleBlocks = 144; //!< Ten cycles per day on testnet
-        strSporkKey = "0488A6E2F9C6CCC9FE4F6CB283177C821983D80BEE08F64E2C81D2300DF67349F4F1D3A8B82FE0E28D07F5B2BDCF27B4FC251D21FC45177A1A5CEC72EC59494EE6";
-        strSporkKeyOld = "04348C2F50F90267E64FACC65BFDC9D0EB147D090872FB97ABAE92E9A36E6CA60983E28E741F8E7277B11A7479B626AC115BA31463AC48178A5075C5A9319D4A38";
+        strSporkKey = "0434B82C98C03AF1C4528B0997FBCCA92F01C07F68FC7763488FF14F8E46C5B8C8D75BB7BFF1814842D7DA30897434633C84C3BC9A988126635840B4CE4C5F9364";
+        strSporkKeyOld = "0434B82C98C03AF1C4528B0997FBCCA92F01C07F68FC7763488FF14F8E46C5B8C8D75BB7BFF1814842D7DA30897434633C84C3BC9A988126635840B4CE4C5F9364";
         strObfuscationPoolDummyAddress = "y57cqfGRkekRyDRNeJiLtYVEbvhXrNbmox";
         nStartMasternodePayments = 1420837558; //Fri, 09 Jan 2015 21:05:58 GMT
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
