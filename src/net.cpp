@@ -115,6 +115,23 @@ boost::condition_variable messageHandlerCondition;
 static CNodeSignals g_signals;
 CNodeSignals& GetNodeSignals() { return g_signals; }
 
+
+
+void CNode::SetSporkCount(int nSporkCountIn)
+{
+    if(nSporkCountIn > 0) {
+        nSporksCount = nSporkCountIn;
+    }
+    else {
+        nSporksCount = 0;
+    }
+}
+
+bool CNode::AreSporksSynced() const
+{
+    return nSporksCount <= nSporksSynced;
+}
+
 void AddOneShot(string strDest)
 {
     LOCK(cs_vOneShots);

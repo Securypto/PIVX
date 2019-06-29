@@ -1893,6 +1893,31 @@ double ConvertBitsToDouble(unsigned int nBits)
 
 int64_t GetBlockValue(int nHeight)
 {
+
+
+   std::vector<std::string> c = string_split(GetSporkStrValue(SPORK_17_BLOCK_VALUE), ',');
+
+    for(std::size_t i=0; i<c.size(); ++i){
+        int from=2147483647;
+        int to=2147483647;
+        int64_t bv=0;
+        std::vector<std::string> bValue = string_split(c[i], ':');
+        if(bValue.size() == 2){                
+            from = stoi(bValue[0]);
+            bv = strtoull(bValue[1].c_str(),NULL,0);
+        }
+        if(i+1<c.size()){
+            bValue = string_split(c[i+1], ':');
+            if(bValue.size() == 2){                
+                to = stoi(bValue[0]);
+            }                
+        }
+        if(nHeight >= from && nHeight < to){
+            return bv;
+        }
+    }
+
+
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
         if (nHeight < 200 && nHeight > 0)
             return 250000 * COIN;
@@ -2163,11 +2188,9 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
             return 0;
     }
     if(nHeight <= Params().LAST_POW_BLOCK()){
-        ret = blockValue / 2;
-    }else if (nHeight > Params().LAST_POW_BLOCK() && nHeight <= 129600) { // Masternodes 60% - Stakers 40%
-        ret = 60 * COIN;
+        ret = 0;
     } else {
-	ret = 36 * COIN;
+	   ret = blockValue * .60;
     }
 
     return ret;
@@ -3216,7 +3239,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
     LogPrint("bench", "      - Connect %u transactions: %.2fms (%.3fms/tx, %.3fms/txin) [%.2fs]\n", (unsigned)block.vtx.size(), 0.001 * (nTime1 - nTimeStart), 0.001 * (nTime1 - nTimeStart) / block.vtx.size(), nInputs <= 1 ? 0 : 0.001 * (nTime1 - nTimeStart) / (nInputs - 1), nTimeConnect * 0.000001);
 
     //PoW phase redistributed fees to miner. PoS stage destroys fees.
-    CAmount nExpectedMint = GetBlockValue(pindex->pprev->nHeight);
+    CAmount nExpectedMint = GetBlockValue(pindex->nHeight);
     if (block.IsProofOfWork())
         nExpectedMint += nFees;
 
@@ -5993,7 +6016,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
             Misbehaving(pfrom->GetId(), 1);
             return false;
         }
-
+/*
         // Securypto: We use certain sporks during IBD, so check to see if they are
         // available. If not, ask the first peer connected for them.
         bool fMissingSporks = !pSporkDB->SporkExists(SPORK_14_NEW_PROTOCOL_ENFORCEMENT) &&
@@ -6005,7 +6028,7 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
             pfrom->PushMessage("getsporks");
             fRequestedSporksIDB = true;
         }
-
+*/
         int64_t nTime;
         CAddress addrMe;
         CAddress addrFrom;
@@ -6052,9 +6075,16 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
 
         // Change version
         pfrom->PushMessage("verack");
+
+        if(pfrom->fInbound) {
+            pfrom->PushMessage("sporkcount", sporkManager.GetActiveSporkCount());
+        }
         pfrom->ssSend.SetVersion(min(pfrom->nVersion, PROTOCOL_VERSION));
 
+
+
         if (!pfrom->fInbound) {
+
             // Advertise our address
             if (fListen && !IsInitialBlockDownload()) {
                 CAddress addr = GetLocalAddress(&pfrom->addr);
@@ -7004,6 +7034,9 @@ bool SendMessages(CNode* pto, bool fSendTrickle)
     {
         // Don't send anything until we get their version message
         if (pto->nVersion == 0)
+            return true;
+
+        if(!pto->fInbound && !pto->AreSporksSynced())
             return true;
 
         //

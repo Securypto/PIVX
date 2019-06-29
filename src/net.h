@@ -382,6 +382,12 @@ public:
     // Whether a ping is requested.
     bool fPingQueued;
 
+    int nSporksCount = -1;
+    int nSporksSynced = 0;
+
+    void SetSporkCount(int nSporkCountIn);
+    bool AreSporksSynced() const;
+
     CNode(SOCKET hSocketIn, CAddress addrIn, std::string addrNameIn = "", bool fInboundIn = false);
     ~CNode();
 

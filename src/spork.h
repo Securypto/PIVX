@@ -70,6 +70,9 @@ std::string GetSporkStrValue(int nSporkID);
 bool IsSporkActive(int nSporkID);
 void ReprocessBlocks(int nBlocks);
 
+
+std::vector<std::string> string_split(std::string s, const char delimiter);
+
 //
 // Spork Class
 // Keeps track of all of the network spork settings
@@ -122,6 +125,8 @@ public:
     bool CheckSignature(CSporkMessage& spork, bool fCheckSigner = false);
     bool Sign(CSporkMessage& spork);
     void Relay(CSporkMessage& msg);
+    int GetActiveSporkCount() const;
+    
 };
 
 #endif

@@ -99,6 +99,7 @@ void ProcessSpork(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
         if (mapSporksActive.count(spork.nSporkID)) {
             if (mapSporksActive[spork.nSporkID].nTimeSigned >= spork.nTimeSigned) {
                 if (fDebug) LogPrintf("%s : seen %s block %d \n", __func__, hash.ToString(), chainActive.Tip()->nHeight);
+                pfrom->nSporksSynced++;
                 return;
             } else {
                 if (fDebug) LogPrintf("%s : got updated spork %s block %d \n", __func__, hash.ToString(), chainActive.Tip()->nHeight);
@@ -121,6 +122,8 @@ void ProcessSpork(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
             return;
         }
 
+        pfrom->nSporksSynced++;
+
         mapSporks[hash] = spork;
         mapSporksActive[spork.nSporkID] = spork;
         sporkManager.Relay(spork);
@@ -135,6 +138,11 @@ void ProcessSpork(CNode* pfrom, std::string& strCommand, CDataStream& vRecv)
             pfrom->PushMessage("spork", it->second);
             it++;
         }
+    } else if(strCommand == "sporkcount") {
+        int nSporkCount = 0;
+        vRecv >> nSporkCount;
+        pfrom->SetSporkCount(nSporkCount);
+        pfrom->PushMessage("getsporks");
     }
 }
 
@@ -158,6 +166,7 @@ int64_t GetSporkValue(int nSporkID)
         if (nSporkID == SPORK_14_NEW_PROTOCOL_ENFORCEMENT) r = SPORK_14_NEW_PROTOCOL_ENFORCEMENT_DEFAULT;
         if (nSporkID == SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2) r = SPORK_15_NEW_PROTOCOL_ENFORCEMENT_2_DEFAULT;
         if (nSporkID == SPORK_16_ZEROCOIN_MAINTENANCE_MODE) r = SPORK_16_ZEROCOIN_MAINTENANCE_MODE_DEFAULT;
+        if (nSporkID == SPORK_17_BLOCK_VALUE) r = 1;
 
         if (r == -1) LogPrintf("%s : Unknown Spork %d\n", __func__, nSporkID);
     }
@@ -273,14 +282,14 @@ bool CSporkManager::UpdateSpork(int nSporkID, int64_t nValue, std::string strVal
             return false;
         }
         std::vector<std::string> c = string_split(GetSporkStrValue(SPORK_17_BLOCK_VALUE), ',');
-        if(!c.empty()){
-            std::vector<std::string> lastValue = string_split(c[c.size()-1], ':');
-            if(lastValue.size() == 2){                
-                if(stoi(lastValue[0]) >= startBlockHeight){
-                    return false;
-                }
+
+        std::vector<std::string> lastValue = string_split(c[c.size()-1], ':');
+        if(lastValue.size() == 2){                
+            if(stoi(lastValue[0]) >= startBlockHeight){
+                return false;
             }
         }
+
 
         if(startBlockHeight < chainActive.Height() + 10) {
             return false;
@@ -307,6 +316,18 @@ bool CSporkManager::UpdateSpork(int nSporkID, int64_t nValue, std::string strVal
 
     return false;
 }
+
+int CSporkManager::GetActiveSporkCount() const
+{
+      std::map<int, CSporkMessage>::iterator it = mapSporksActive.begin();
+      int count = 0;
+        while (it != mapSporksActive.end()) {
+            count++;
+            it++;
+        }
+    return count;
+}
+
 
 void CSporkManager::Relay(CSporkMessage& msg)
 {
