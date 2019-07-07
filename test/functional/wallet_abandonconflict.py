@@ -62,13 +62,13 @@ class AbandonConflictTest(BitcoinTestFramework):
         inputs.append({"txid":txAB1, "vout":nAB})
         inputs.append({"txid":txC, "vout":nC})
         outputs = {}
-        outputs[self.nodes[0].getnewaddress()] = Decimal("24.9996")
+        outputs[self.nodes[0].getnewaddress()] = Decimal("24.19996")
         signed2 = self.nodes[0].signrawtransaction(self.nodes[0].createrawtransaction(inputs, outputs))
         txABC2 = self.nodes[0].sendrawtransaction(signed2["hex"])
 
         # In mempool txs from self should increase balance from change
         newbalance = self.nodes[0].getbalance()
-        assert_equal(newbalance, balance - Decimal("30") + Decimal("24.9996"))
+        assert_equal(newbalance, balance - Decimal("30") + Decimal("24.19996"))
         balance = newbalance
 
         # Restart the node with a higher min relay fee so the parent tx is no longer in mempool
@@ -83,7 +83,7 @@ class AbandonConflictTest(BitcoinTestFramework):
         # Not in mempool txs from self should only reduce balance
         # inputs are still spent, but change not received
         newbalance = self.nodes[0].getbalance()
-        assert_equal(newbalance, balance - Decimal("24.9996"))
+        assert_equal(newbalance, balance - Decimal("24.19996"))
         # Unconfirmed received funds that are not in mempool, also shouldn't show
         # up in unconfirmed balance
         unconfbalance = self.nodes[0].getunconfirmedbalance() + self.nodes[0].getbalance()
@@ -116,7 +116,7 @@ class AbandonConflictTest(BitcoinTestFramework):
         # Send child tx again so its unabandoned
         self.nodes[0].sendrawtransaction(signed2["hex"])
         newbalance = self.nodes[0].getbalance()
-        assert_equal(newbalance, balance - Decimal("10") - Decimal("14.99998") + Decimal("24.9996"))
+        assert_equal(newbalance, balance - Decimal("10") - Decimal("14.99998") + Decimal("24.19996"))
         balance = newbalance
 
         # Remove using high relay fee again
@@ -124,7 +124,7 @@ class AbandonConflictTest(BitcoinTestFramework):
         self.nodes[0]=start_node(0, self.options.tmpdir, ["-debug","-logtimemicros","-minrelaytxfee=0.0001"])
         assert_equal(len(self.nodes[0].getrawmempool()), 0)
         newbalance = self.nodes[0].getbalance()
-        assert_equal(newbalance, balance - Decimal("24.9996"))
+        assert_equal(newbalance, balance - Decimal("24.19996"))
         balance = newbalance
 
         # Create a double spend of AB1 by spending again from only A's 10 output

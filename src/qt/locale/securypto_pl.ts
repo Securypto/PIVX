@@ -5258,8 +5258,8 @@ Proszę być cierpliwym...</translation>
         <translation>Nie można znaleźć wystarczającej liczby funduszy ukrytych dla tej transakcji.</translation>
     </message>
     <message>
-        <source>(9996 could be used only on mainnet)</source>
-        <translation>(9996 może być używany tylko w sieci mainnet)</translation>
+        <source>(19996 could be used only on mainnet)</source>
+        <translation>(19996 może być używany tylko w sieci mainnet)</translation>
     </message>
     <message>
         <source>(default: %s)</source>
@@ -5270,8 +5270,8 @@ Proszę być cierpliwym...</translation>
         <translation>(domyślnie: 1)</translation>
     </message>
     <message>
-        <source>(must be 9996 for mainnet)</source>
-        <translation>(musi być 9996 dla mainnetu)</translation>
+        <source>(must be 19996 for mainnet)</source>
+        <translation>(musi być 19996 dla mainnetu)</translation>
     </message>
     <message>
         <source>Accept command line and JSON-RPC commands</source>

@@ -253,10 +253,10 @@ QT_TRANSLATE_NOOP("securypto-core", ""
 QT_TRANSLATE_NOOP("securypto-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("securypto-core", "(9996 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("securypto-core", "(19996 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("securypto-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("securypto-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("securypto-core", "(must be 9996 for mainnet)"),
+QT_TRANSLATE_NOOP("securypto-core", "(must be 19996 for mainnet)"),
 QT_TRANSLATE_NOOP("securypto-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("securypto-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("securypto-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),

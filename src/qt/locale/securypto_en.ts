@@ -6908,8 +6908,8 @@ Please be patient...</source>
     </message>
     <message>
         <location line="+3"/>
-        <source>(9996 could be used only on mainnet)</source>
-        <translation type="unfinished">(9996 could be used only on mainnet)</translation>
+        <source>(19996 could be used only on mainnet)</source>
+        <translation type="unfinished">(19996 could be used only on mainnet)</translation>
     </message>
     <message>
         <location line="+1"/>
@@ -6923,7 +6923,7 @@ Please be patient...</source>
     </message>
     <message>
         <location line="+1"/>
-        <source>(must be 9996 for mainnet)</source>
+        <source>(must be 19996 for mainnet)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
